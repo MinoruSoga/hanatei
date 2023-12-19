@@ -255,11 +255,12 @@ body .about {
 }
 body .about .inner {
   text-align: center;
+  margin: 18px;
 }
 body .about .inner h2 {
   font-size: 32px;
   color: black;
-  margin-top: 30px;
+  margin-top: 12px;
   margin-bottom: 13px;
 }
 @media screen and (min-width: 768px) {
@@ -272,7 +273,6 @@ body .about .inner p {
   font-size: 18px;
   color: black;
   line-height: 2;
-  margin: 0 18px;
   margin-bottom: 25px;
 }
 @media screen and (min-width: 768px) {
@@ -288,7 +288,6 @@ body .about .inner img {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 0 18px;
 }
 @media screen and (min-width: 768px) {
   body .about .inner img {
