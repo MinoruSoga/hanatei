@@ -6,33 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>はな亭</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- jQueryをCDN経由で読み込む -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body style="background-image: url('image/background.jpeg')">
-    <div class="nav">
+    <header>
       <a class="logo-link" href="/">
-        <h1 class="logo_">はな亭</h1>
-      </a>
-      <input id="drawer_input" class="drawer_hidden" type="checkbox" />
-      <label for="drawer_input" class="drawer_open"><span></span></label>
-      <!-- sp  -->
-      <nav class="nav_content">
-        <ul class="nav_list">
-          <li class="nav_item"><a href="">はな亭について</a></li>
-          <li class="nav_item"><a href="">お料理</a></li>
-          <li class="nav_item"><a href="">ご案内</a></li>
-          <li class="nav_item"><a href="">アクセス</a></li>
-          <li class="nav_item"><a href="">ご予約</a></li>
-          <li class="nav_item"><a href="">採用情報</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- <header>
-      <div class="header_box">
         <img src="image/Logo.png" alt="Your Logo" class="logo" />
-        <h1 class="logo_">はな亭</h1>
-      </div>
-      pc 
-    <ul class="nav_list">
+        <h1 class="">はな亭</h1>
+      </a>
+      <!-- pc -->
+      <ul class="nav_list">
         <li class="nav_item"><a href="">はな亭について</a></li>
         <li class="nav_item"><a href="">お料理</a></li>
         <li class="nav_item"><a href="">ご案内</a></li>
@@ -40,19 +24,24 @@
         <li class="nav_item"><a href="">ご予約</a></li>
         <li class="nav_item"><a href="">採用情報</a></li>
       </ul>
-    </header> -->
+      <div class="menu-icon">
+        <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+        <!-- sp  -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="">はな亭について</a></li>
+            <li class="nav_item"><a href="">お料理</a></li>
+            <li class="nav_item"><a href="">ご案内</a></li>
+            <li class="nav_item"><a href="">アクセス</a></li>
+            <li class="nav_item"><a href="">ご予約</a></li>
+            <li class="nav_item"><a href="">採用情報</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <script>
-      var mobileMenu = document.getElementById("mobile-menu");
-      var navList = document.getElementById("nav-list");
-
-      mobileMenu.addEventListener("click", function () {
-        mobileMenu.classList.toggle("close"); // ハンバーガーメニューのアイコンを×印に切り替え
-        navList.classList.toggle("show");
-      });
-    </script>
     <section class="fv">
-      <!-- <h1>はな亭</h1> -->
       <div id="slide" class="bg">
         <img src="image/top-bg.jpeg" alt="はな亭" />
       </div>
@@ -81,8 +70,23 @@
       </div>
       <div class="inner">
         <div class="food_course">
-          <div>
-            <img src="image/title1.jpeg" alt="はな亭" />
+          <div class="img-frame">
+            <div class="img-01">
+              <img src="image/title1.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-02">
+              <img src="image/title2.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-03">
+              <img src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div>
+          <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
           </div>
           <div>
             <p class="title">ランチコース</p>
@@ -100,8 +104,23 @@
           </div>
         </div>
         <div class="food_course">
-          <div>
-            <img src="image/title2.jpeg" alt="はな亭" />
+          <div class="img-frame">
+            <div class="img-01">
+              <img src="image/title1.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-02">
+              <img src="image/title2.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-03">
+              <img src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div>
+          <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
           </div>
           <div>
             <p class="title">ディナーコース</p>
@@ -121,41 +140,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="pc_inner">
-        <div class="pc_image">
-          <img src="image/title1.jpeg" alt="はな亭" />
-          <img src="image/title2.jpeg" alt="はな亭" />
-          <img src="image/title3.jpeg" alt="はな亭" />
-        </div>
-        <div class="pc_food_course">
-          <div>
-            <p class="title">ランチコース</p>
-            <p class="text">
-              昼手頃ランチ3.500(税別)
-              <br />
-              部屋取り5.000
-              <br />
-              15人以上の場合、3.500円で10%
-              <br />
-              接待(部屋)5.000 客室15%サービス30%カード10%
-            </p>
-          </div>
-          <div>
-            <p class="title">ディナーコース</p>
-            <p class="text">
-              みに会席6.000(税込)
-              <br />
-              部屋取り5.000≠
-              <br />
-              15人以上の場合、3.500円で10%
-              <br />
-              接待(部屋)5.000 客室15%サービス30%カード10%
-              <br />
-              宴会 相談
-            </p>
-          </div>
-        </div>
-      </div> -->
     </section>
     <hr class="ussura" />
     <section class="guidance">
@@ -194,13 +178,13 @@
           </div>
         </div>
       </div>
-      <!-- <div class="pc_inner">
+      <div class="pc_inner">
         <div class="pc_image">
           <img src="image/title4.jpeg" alt="はな亭" />
           <img src="image/title5.jpeg" alt="はな亭" />
           <img src="image/title6.jpeg" alt="はな亭" />
         </div>
-      </div> -->
+      </div>
     </section>
     <hr class="ussura" />
     <section class="access">
@@ -231,7 +215,7 @@
         </p>
       </div>
     </section>
-    <!-- <section class="PC_access">
+    <section class="PC_access">
       <h2>アクセス</h2>
       <div class="PC_title">
         <iframe
@@ -261,8 +245,7 @@
         <br />
         ご了承の程よろしくお願い致します。
       </p>
-    </section> -->
-
+    </section>
     <footer>
       <h1>はな亭</h1>
       <div class="address">

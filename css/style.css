@@ -47,32 +47,42 @@ a {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-body .nav {
+body header {
   display: flex;
+  position: fixed;
+  z-index: 30;
+  height: 90px;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
   padding-left: 17px;
   padding-right: 27px;
 }
-body .nav .logo-link h1.logo_ {
-  font-size: 36px;
+body header .logo-link {
+  display: flex;
+  align-items: center;
+}
+body header .logo-link img.logo {
+  width: 30px;
+  height: 30px;
+}
+body header .logo-link h1 {
   color: black;
+  font-size: 32px;
+  font-weight: bold;
 }
-@media screen and (min-width: 768px) {
-  body .nav .logo-link h1.logo_ {
-    font-size: 64px;
-  }
-}
-body .nav .drawer_hidden {
+body header .menu-icon .drawer_hidden {
   display: none;
 }
-body .nav .drawer_open {
+body header .menu-icon .drawer_open {
   display: flex;
   height: 60px;
   width: 60px;
@@ -82,9 +92,9 @@ body .nav .drawer_open {
   z-index: 100;
   cursor: pointer;
 }
-body .nav .drawer_open span,
-body .nav .drawer_open span:before,
-body .nav .drawer_open span:after {
+body header .menu-icon .drawer_open span,
+body header .menu-icon .drawer_open span:before,
+body header .menu-icon .drawer_open span:after {
   content: "";
   display: block;
   height: 1px;
@@ -94,24 +104,32 @@ body .nav .drawer_open span:after {
   transition: 0.4s;
   position: absolute;
 }
-body .nav .drawer_open span:before {
+body header .menu-icon .drawer_open span:before {
   bottom: 12px;
 }
-body .nav .drawer_open span:after {
+body header .menu-icon .drawer_open span:after {
   top: 12px;
 }
-body .nav #drawer_input:checked ~ .drawer_open span {
+body header .menu-icon #drawer_input:checked ~ .drawer_open span {
   background: rgba(255, 255, 255, 0);
 }
-body .nav #drawer_input:checked ~ .drawer_open span::before {
+body header .menu-icon #drawer_input:checked ~ .drawer_open span::before {
   bottom: 0;
   transform: rotate(45deg);
 }
-body .nav #drawer_input:checked ~ .drawer_open span::after {
+body header .menu-icon #drawer_input:checked ~ .drawer_open span::after {
   top: 0;
   transform: rotate(-45deg);
 }
-body .nav .nav_content {
+body header .menu-icon #drawer_input:checked ~ .nav_content {
+  left: 0;
+}
+@media screen and (min-width: 768px) {
+  body header .menu-icon #drawer_input:checked ~ .nav_content {
+    display: none;
+  }
+}
+body header .menu-icon .nav_content {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -125,11 +143,11 @@ body .nav .nav_content {
   transition: 0.5s;
 }
 @media screen and (min-width: 768px) {
-  body .nav .nav_content {
+  body header .menu-icon .nav_content {
     display: flex;
   }
 }
-body .nav .nav_content .nav_list {
+body header .menu-icon .nav_content .nav_list {
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -138,11 +156,11 @@ body .nav .nav_content .nav_list {
   margin-top: 80px;
 }
 @media screen and (min-width: 768px) {
-  body .nav .nav_content .nav_list {
+  body header .menu-icon .nav_content .nav_list {
     display: flex;
   }
 }
-body .nav .nav_content .nav_list a {
+body header .menu-icon .nav_content .nav_list a {
   list-style: none;
   line-height: 5;
   letter-spacing: 10px;
@@ -156,29 +174,7 @@ body .nav .nav_content .nav_list a {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 768px) {
-  body .nav {
-    display: none;
-  }
-}
-body header {
-  display: flex;
-  position: fixed;
-  z-index: 30;
-  height: 90px;
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 17px;
-  padding-right: 27px;
-}
-body header .header_box {
-  display: none;
-}
-body header .nav_list {
+body header > ul.nav_list {
   display: none;
 }
 @media screen and (min-width: 768px) {
@@ -186,51 +182,41 @@ body header .nav_list {
     height: 128px;
     width: 100%;
   }
-  body header .header_box {
+  body header .logo-link {
     display: flex;
+    margin-left: 42px;
   }
-  body header .header_box .logo {
+  body header .logo-link img.logo {
     width: 100px;
     height: 100px;
-    margin-top: 14px;
-    margin-left: 42px;
-    margin-bottom: 14px;
   }
-  body header .header_box .logo_ {
-    font-size: 32px;
-    margin-top: 41px;
-    margin-bottom: 41px;
+  body header .logo-link h1 {
     margin-left: 27px;
   }
-  body header .nav_list {
+  body header > ul.nav_list {
     display: flex;
     color: #333;
   }
-  body header .nav_list .nav_item a {
+  body header > ul.nav_list .nav_item a {
     color: #333;
     font-size: 20px;
     margin-top: 57px;
     margin-bottom: 57px;
     margin-right: 40px;
   }
-}
-body #drawer_input:checked ~ .nav_content {
-  left: 0;
-}
-@media screen and (min-width: 768px) {
-  body #drawer_input:checked ~ .nav_content {
+  body header .menu-icon {
+    display: none;
+  }
+  body header .nav_content {
     display: none;
   }
 }
 body section.fv {
-  margin-top: 49px;
+  padding-top: 111px;
 }
-@media screen and (min-width: 768px) {
-  body section.fv h1 {
-    text-align: center;
-    font-size: 64px;
-    margin-top: 54px;
-  }
+body section.fv .bg {
+  display: flex;
+  justify-content: center;
 }
 body section.fv .bg img {
   width: 100%;
@@ -240,64 +226,62 @@ body section.fv .bg img {
 }
 @media screen and (min-width: 768px) {
   body section.fv .bg img {
-    width: 1200px;
+    max-width: 1200px;
     height: 450px;
     -o-object-fit: cover;
        object-fit: cover;
-    margin: 0 120px;
     margin-top: 57px;
   }
 }
-body .about {
+body section.about {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .about .inner {
+body section.about .inner {
   text-align: center;
   width: 90%;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
 }
-body .about .inner h2 {
+body section.about .inner h2 {
   font-size: 32px;
   color: black;
   margin-top: 12px;
   margin-bottom: 13px;
 }
 @media screen and (min-width: 768px) {
-  body .about .inner h2 {
+  body section.about .inner h2 {
     font-size: 40px;
     margin-top: 57px;
   }
 }
-body .about .inner p {
+body section.about .inner p {
   font-size: 18px;
   color: black;
   line-height: 2;
   margin-bottom: 25px;
 }
 @media screen and (min-width: 768px) {
-  body .about .inner p {
+  body section.about .inner p {
     font-size: 24px;
     text-align: left;
-    margin: 0 220px;
     margin-top: 60px;
   }
 }
-body .about .inner img {
+body section.about .inner img {
   width: 355px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media screen and (min-width: 768px) {
-  body .about .inner img {
+  body section.about .inner img {
     width: 1000px;
     height: 400px;
     -o-object-fit: cover;
        object-fit: cover;
-    margin: 0 220px;
     margin-top: 32px;
     margin-bottom: 47px;
   }
@@ -315,99 +299,66 @@ body .title h2 {
   }
 }
 @media screen and (min-width: 768px) {
-  body .food .title h2 {
+  body section.food .title h2 {
     font-size: 40px;
   }
 }
-body .food .inner {
+body section.food .inner {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
 }
-body .food .inner .food_course {
+body section.food .inner .food_course {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .food .inner .food_course div {
+body section.food .inner .food_course div {
   text-align: center;
   line-height: 1.4;
 }
-body .food .inner .food_course img {
-  width: 165px;
-  height: 195px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body .food .inner .food_course .title {
+body section.food .inner .title {
   font-size: 20px;
   font-weight: bold;
 }
-body .food .inner .food_course .text {
+body section.food .inner .text {
   font-size: 10px;
   line-height: 2.4;
 }
-@media screen and (min-width: 768px) {
-  body .food .pc_inner {
-    width: 1020px;
-    justify-content: center;
-    margin: 0 210px;
-  }
-  body .food .pc_inner .pc_image {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  body .food .pc_inner .pc_image img {
-    width: 333px;
-    height: 333px;
-    margin-bottom: 90px;
-  }
-  body .food .pc_inner .title {
-    font-size: 32px;
-    font-weight: bold;
-  }
-  body .food .pc_inner .text {
-    font-size: 24px;
-    line-height: 4;
-    text-align: center;
-    margin-top: 34px;
-    margin-bottom: 34px;
-  }
-}
-body .guidance .title p {
+
+.guidance .title p {
   font-size: 14px;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  body .guidance .title h2 {
+  .guidance .title h2 {
     font-size: 40px;
   }
-  body .guidance .title p {
+  .guidance .title p {
     font-size: 24px;
   }
 }
-body .guidance .inner {
+.guidance .inner {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
   justify-content: space-between;
 }
-body .guidance .inner .guidance_course {
+.guidance .inner .guidance_course {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body .guidance .inner .guidance_course div {
+.guidance .inner .guidance_course div {
   text-align: center;
   line-height: 1.4;
 }
-body .guidance .inner .guidance_course .text {
+.guidance .inner .guidance_course .text {
   font-size: 18px;
   line-height: 2.4;
 }
 @media screen and (min-width: 768px) {
-  body .guidance .inner .guidance_course .text {
+  .guidance .inner .guidance_course .text {
     font-size: 24px;
     margin: auto;
     text-align: left;
@@ -416,83 +367,111 @@ body .guidance .inner .guidance_course .text {
     margin-bottom: 82px;
   }
 }
-body .guidance .inner .image {
+.guidance .inner .image {
   display: flex;
   justify-content: space-between;
 }
-body .guidance .inner .image img {
+@media screen and (min-width: 768px) {
+  .guidance .inner .image {
+    display: none;
+  }
+}
+.guidance .inner .image img {
   width: 170px;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.guidance .pc_inner {
+  display: none;
+}
 @media screen and (min-width: 768px) {
-  body .guidance .pc_inner {
+  .guidance .pc_inner {
+    display: block;
     width: 1020px;
     justify-content: center;
     margin: 0 210px;
   }
-  body .guidance .pc_inner .pc_image {
+  .guidance .pc_inner .pc_image {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  body .guidance .pc_inner .pc_image img {
+  .guidance .pc_inner .pc_image img {
     width: 333px;
     height: 333px;
     margin-bottom: 90px;
   }
 }
-body .access h1 {
+
+.access {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .access {
+    display: none;
+  }
+}
+.access h1 {
   margin-bottom: 35px;
 }
-body .access .Bo {
+.access .Bo {
   font-size: 14px;
   font-weight: bold;
 }
-body .access .B_o {
+.access .B_o {
   font-size: 20px;
 }
-body .access p {
+.access p {
   margin-bottom: 35px;
 }
-body .PC_access h2 {
-  text-align: center;
-  font-size: 40px;
-  margin-top: 95px;
+
+.PC_access {
+  display: none;
 }
-body .PC_access .PC_title {
-  display: flex;
+
+@media screen and (min-width: 768px) {
+  .PC_access {
+    display: block;
+  }
+  .PC_access h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 95px;
+  }
+  .PC_access .PC_title {
+    display: flex;
+  }
+  .PC_access .PC_title iframe {
+    margin-top: 138px;
+    margin-left: 121px;
+    margin-bottom: 90px;
+  }
+  .PC_access .PC_title .font {
+    text-align: center;
+    line-height: 2.4;
+    margin-top: 223px;
+    margin-left: 114px;
+  }
+  .PC_access .PC_title .font .Bo {
+    font-size: 24px;
+  }
+  .PC_access .PC_title .font .B_o {
+    font-size: 32px;
+  }
+  .PC_access .PC_title .font p {
+    font-size: 20px;
+  }
+  .PC_access .PC_title .font h1 {
+    font-size: 36px;
+  }
+  .PC_access .display {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 53px;
+  }
 }
-body .PC_access iframe {
-  margin-top: 138px;
-  margin-left: 121px;
-  margin-bottom: 90px;
-}
-body .PC_access .font {
-  text-align: center;
-  line-height: 2.4;
-  margin-top: 223px;
-  margin-left: 114px;
-}
-body .PC_access .font .Bo {
-  font-size: 24px;
-}
-body .PC_access .font .B_o {
-  font-size: 32px;
-}
-body .PC_access .font p {
-  font-size: 20px;
-}
-body .PC_access .font h1 {
-  font-size: 36px;
-}
-body .PC_access .display {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 53px;
-}
-body footer {
+footer {
   background-color: black;
   color: white;
   padding: 20px;
@@ -501,53 +480,53 @@ body footer {
   box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
-  body footer {
+  footer {
     height: 390px;
   }
 }
-body footer h1 {
+footer h1 {
   font-size: 24px;
   margin-bottom: 35px;
 }
 @media screen and (min-width: 768px) {
-  body footer h1 {
+  footer h1 {
     font-size: 64px;
     margin-top: 55px;
     margin-left: 116px;
     margin-bottom: 50px;
   }
 }
-body footer .address {
+footer .address {
   display: flex;
   gap: 10px;
 }
-body footer p {
+footer p {
   line-height: 1;
   font-size: 10px;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
-  body footer p {
+  footer p {
     font-size: 20px;
     margin-bottom: 29px;
   }
 }
-body footer .fo {
+footer .fo {
   margin: 0;
 }
 @media screen and (min-width: 768px) {
-  body footer .fo {
+  footer .fo {
     font-size: 24px;
     margin-left: 116px;
     margin-bottom: 29px;
   }
 }
-body footer .tel {
+footer .tel {
   font-size: 15px;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  body footer .tel {
+  footer .tel {
     font-size: 32px;
     margin-bottom: 29px;
   }
