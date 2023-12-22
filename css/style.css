@@ -317,13 +317,183 @@ body section.food .inner .food_course div {
   text-align: center;
   line-height: 1.4;
 }
-body section.food .inner .title {
+body section.food .inner .food_course .img-frame {
+  position: relative;
+  width: 165px;
+  height: 195px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  body section.food .inner .food_course .img-frame {
+    display: none;
+  }
+}
+body section.food .inner .food_course .img-frame .img-01,
+body section.food .inner .food_course .img-frame .img-02,
+body section.food .inner .food_course .img-frame .img-03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body section.food .inner .food_course .img-frame .img-01 img,
+body section.food .inner .food_course .img-frame .img-02 img,
+body section.food .inner .food_course .img-frame .img-03 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body section.food .inner .food_course .img-frame .img-01 {
+  animation: slide-animation-01 24s infinite;
+}
+body section.food .inner .food_course .img-frame .img-02 {
+  animation: slide-animation-02 24s infinite;
+}
+body section.food .inner .food_course .img-frame .img-03 {
+  animation: slide-animation-03 24s infinite;
+}
+@keyframes slide-animation-01 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slide-animation-02 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-animation-03 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+body section.food .title {
   font-size: 20px;
   font-weight: bold;
 }
-body section.food .inner .text {
+@media screen and (min-width: 768px) {
+  body section.food .title {
+    display: none;
+  }
+}
+body section.food .text {
   font-size: 10px;
   line-height: 2.4;
+}
+@media screen and (min-width: 768px) {
+  body section.food .text {
+    display: none;
+  }
+}
+body .pc_food {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  body .pc_food {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  body .pc_food .title h2 {
+    font-size: 40px;
+  }
+  body .pc_food .pc_inner {
+    display: block;
+  }
+  body .pc_food .pc_inner .slide-container {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  body .pc_food .pc_inner .slide-container .slide-wrapper {
+    display: flex;
+    width: -moz-max-content;
+    width: max-content;
+    animation: slide-flow 3s infinite linear 0.5s both;
+  }
+  body .pc_food .pc_inner .slide-container .slide {
+    width: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 1px solid black;
+  }
+  body .pc_food .pc_inner .img-frame {
+    display: none;
+  }
+  @keyframes slide-flow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  body .pc_food .pc_inner .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 90px;
+    margin-bottom: 34px;
+  }
+  body .pc_food .pc_inner .text {
+    font-size: 24px;
+    text-align: center;
+    line-height: 3.5;
+    margin-bottom: 45px;
+  }
 }
 
 .guidance .title p {

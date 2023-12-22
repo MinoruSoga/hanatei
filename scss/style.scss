@@ -318,171 +318,193 @@ body {
           text-align: center;
           line-height: 1.4;
         }
-        // .img-frame {
-        //   position: relative;
-        //   width: 165px;
-        //   height: 195px;
-        //   overflow: hidden;
-        //   margin: 0 auto;
-        //   margin-bottom: 5px;
+        .img-frame {
+          position: relative;
+          width: 165px;
+          height: 195px;
+          overflow: hidden;
+          margin: 0 auto;
+          margin-bottom: 5px;
+          @include media(md) {
+            display: none;
+          }
 
-        //   .img-01,
-        //   .img-02,
-        //   .img-03 {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     img {
-        //       width: 100%;
-        //       height: 100%;
-        //       object-fit: cover;
-        //     }
-        //   }
-        //   .img-01 {
-        //     animation: slide-animation-01 24s infinite;
-        //   }
+          .img-01,
+          .img-02,
+          .img-03 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .img-01 {
+            animation: slide-animation-01 24s infinite;
+          }
 
-        //   .img-02 {
-        //     animation: slide-animation-02 24s infinite;
-        //   }
+          .img-02 {
+            animation: slide-animation-02 24s infinite;
+          }
 
-        //   .img-03 {
-        //     animation: slide-animation-03 24s infinite;
-        //   }
+          .img-03 {
+            animation: slide-animation-03 24s infinite;
+          }
 
-        //   @keyframes slide-animation-01 {
-        //     0% {
-        //       opacity: 1;
-        //       transform: scale(1);
-        //     }
-        //     30% {
-        //       opacity: 1;
-        //     }
-        //     40% {
-        //       opacity: 0;
-        //       transform: scale(1.15);
-        //     }
-        //     90% {
-        //       opacity: 0;
-        //     }
-        //     100% {
-        //       opacity: 1;
-        //       transform: scale(1);
-        //     }
-        //   }
+          @keyframes slide-animation-01 {
+            0% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            30% {
+              opacity: 1;
+            }
+            40% {
+              opacity: 0;
+              transform: scale(1.15);
+            }
+            90% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
 
-        //   @keyframes slide-animation-02 {
-        //     0% {
-        //       opacity: 0;
-        //     }
-        //     30% {
-        //       opacity: 0;
-        //       transform: scale(1.1);
-        //     }
-        //     40% {
-        //       opacity: 1;
-        //     }
-        //     60% {
-        //       opacity: 1;
-        //     }
-        //     70% {
-        //       opacity: 0;
-        //       transform: scale(1);
-        //     }
-        //     100% {
-        //       opacity: 0;
-        //     }
-        //   }
+          @keyframes slide-animation-02 {
+            0% {
+              opacity: 0;
+            }
+            30% {
+              opacity: 0;
+              transform: scale(1.1);
+            }
+            40% {
+              opacity: 1;
+            }
+            60% {
+              opacity: 1;
+            }
+            70% {
+              opacity: 0;
+              transform: scale(1);
+            }
+            100% {
+              opacity: 0;
+            }
+          }
 
-        //   @keyframes slide-animation-03 {
-        //     0% {
-        //       opacity: 0;
-        //     }
-        //     60% {
-        //       opacity: 0;
-        //       transform: scale(1);
-        //     }
-        //     70% {
-        //       opacity: 1;
-        //     }
-        //     90% {
-        //       opacity: 1;
-        //     }
-        //     100% {
-        //       opacity: 0;
-        //       transform: scale(1.1);
-        //     }
-        //   }
-        // }
-        // .slide-container {
-        //   width: 100%;
-        //   margin: $slide-container-margin auto;
-        //   display: flex;
-        //   align-items: center;
-        //   overflow: hidden;
-
-        //   .slide-wrapper {
-        //     display: flex;
-        //     animation: slide-flow $slide-duration infinite linear $slide-delay
-        //       both;
-        //   }
-
-        //   .slide {
-        //     width: 340px;
-        //     object-fit: cover;
-        //     border: 1px solid black;
-        //   }
-        // }
-        // @include media(md) {
-        //   .img-frame {
-        //     display: none;
-        //   }
-        //   .slide-wrapper {
-        //     display: flex;
-        //     animation: slide-flow $slide-duration infinite linear $slide-delay
-        //       both;
-        //   }
-        //   .slide {
-        //     width: 300px;
-        //     object-fit: cover;
-        //     border: 1px solid #ddd;
-        //   }
-        // }
-        // @keyframes slide-flow {
-        //   0% {
-        //     transform: translateX(0);
-        //   }
-        //   100% {
-        //     transform: translateX(-100%);
-        //   }
-        // }
-
-        // .slide-container {
-        //   display: none;
-        // }
-        // @include media(md) {
-        //   .food_course {
-        //     flex-direction: column;
-        //     justify-content: space-between;
-        //     align-items: center;
-        //   }
-        // }
+          @keyframes slide-animation-03 {
+            0% {
+              opacity: 0;
+            }
+            60% {
+              opacity: 0;
+              transform: scale(1);
+            }
+            70% {
+              opacity: 1;
+            }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: scale(1.1);
+            }
+          }
+        }
       }
+    }
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+      @include media(md) {
+        display: none;
+      }
+    }
+    .text {
+      font-size: 10px;
+      line-height: 2.4;
+      @include media(md) {
+        display: none;
+      }
+    }
+  }
+  .pc_food {
+    display: none;
+  }
+  @include media(md) {
+    .pc_food {
+      display: block;
+      justify-content: center;
+      align-items: center;
       .title {
-        font-size: 20px;
-        font-weight: bold;
+        h2 {
+          font-size: 40px;
+        }
       }
-      .text {
-        font-size: 10px;
-        line-height: 2.4;
+      .pc_inner {
+        display: block;
+        $slide-container-margin: 20px;
+        $slide-duration: 3s;
+        $slide-delay: 0.5s;
+        $max-width: 100%;
+        .slide-container {
+          width: $max-width;
+          margin: $slide-container-margin auto;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          margin: 20px auto;
+
+          .slide-wrapper {
+            display: flex;
+            width: max-content;
+            animation: slide-flow $slide-duration infinite linear $slide-delay
+              both;
+          }
+
+          .slide {
+            width: 100%;
+            max-width: $max-width;
+            object-fit: cover;
+            border: 1px solid black;
+          }
+        }
+        .img-frame {
+          display: none;
+        }
+
+        @keyframes slide-flow {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        .title {
+          font-size: 32px;
+          font-weight: bold;
+          margin-top: 90px;
+          margin-bottom: 34px;
+        }
+        .text {
+          font-size: 24px;
+          text-align: center;
+          line-height: 3.5;
+          margin-bottom: 45px;
+        }
       }
     }
   }
 }
-//   }
-// }
 .guidance {
   .title {
     p {
