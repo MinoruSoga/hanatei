@@ -227,7 +227,7 @@ body section.fv .bg img {
 @media screen and (min-width: 768px) {
   body section.fv .bg img {
     max-width: 1200px;
-    height: 450px;
+    height: 560px;
     -o-object-fit: cover;
        object-fit: cover;
     margin-top: 57px;
@@ -529,5 +529,83 @@ footer .tel {
   footer .tel {
     font-size: 32px;
     margin-bottom: 29px;
+  }
+}
+
+.fv {
+  padding-top: 111px;
+}
+.fv .bg_2 {
+  display: flex;
+  justify-content: center;
+}
+.fv .bg_2 img {
+  width: 100%;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .fv .bg_2 img {
+    max-width: 1200px;
+    height: 560px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 57px;
+  }
+}
+
+.recruit {
+  justify-content: center;
+  align-items: center;
+}
+.recruit .inner {
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.recruit .inner h2 {
+  font-size: 15px;
+  margin-top: 43px;
+}
+@media screen and (min-width: 768px) {
+  .recruit .inner h2 {
+    font-size: 32px;
+    margin-top: 151px;
+  }
+}
+.recruit .inner .bo {
+  font-size: 10px;
+  margin-top: 31px;
+}
+@media screen and (min-width: 768px) {
+  .recruit .inner .bo {
+    font-size: 24px;
+    margin-top: 85px;
+  }
+}
+.recruit .inner .main {
+  color: red;
+  font-size: 15px;
+  margin-top: 31px;
+}
+@media screen and (min-width: 768px) {
+  .recruit .inner .main {
+    font-size: 32px;
+    margin-top: 85px;
+  }
+}
+.recruit .inner h2.inner_p {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 52px;
+}
+@media screen and (min-width: 768px) {
+  .recruit .inner h2.inner_p {
+    font-size: 32px;
+    margin-top: 19px;
+    margin-bottom: 85px;
   }
 }/*# sourceMappingURL=style.css.map */
