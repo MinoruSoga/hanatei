@@ -453,9 +453,6 @@ body .pc_food {
   body .pc_food .pc_inner .slide-container {
     width: 100%;
     margin: 20px auto;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
     margin: 20px auto;
   }
   body .pc_food .pc_inner .slide-container .slide-wrapper {

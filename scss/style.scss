@@ -458,9 +458,9 @@ body {
         .slide-container {
           width: $max-width;
           margin: $slide-container-margin auto;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
+          // display: flex;
+          // align-items: center;
+          // overflow: hidden;
           margin: 20px auto;
 
           .slide-wrapper {
