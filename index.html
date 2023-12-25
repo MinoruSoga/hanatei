@@ -4,36 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <title>はな亭</title> -->
-    <title>はな亭 PC</title>
+    <title>はな亭</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- jQueryをCDN経由で読み込む -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body style="background-image: url('image/background.jpeg')">
-    <div class="nav">
+    <header>
       <a class="logo-link" href="/">
-        <h1 class="logo_">はな亭</h1>
-      </a>
-      <input id="drawer_input" class="drawer_hidden" type="checkbox" />
-      <label for="drawer_input" class="drawer_open"><span></span></label>
-      <!-- sp  -->
-      <nav class="nav_content">
-        <ul class="nav_list">
-          <li class="nav_item"><a href="">はな亭について</a></li>
-          <li class="nav_item"><a href="">お料理</a></li>
-          <li class="nav_item"><a href="">ご案内</a></li>
-          <li class="nav_item"><a href="">アクセス</a></li>
-          <li class="nav_item"><a href="">ご予約</a></li>
-          <li class="nav_item"><a href="">採用情報</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!-- <header>
-      <div class="header_box">
         <img src="image/Logo.png" alt="Your Logo" class="logo" />
-        <h1 class="logo_">はな亭</h1>
-      </div>
-      pc 
-    <ul class="nav_list">
+        <h1 class="">はな亭</h1>
+      </a>
+      <ul class="nav_list">
         <li class="nav_item"><a href="">はな亭について</a></li>
         <li class="nav_item"><a href="">お料理</a></li>
         <li class="nav_item"><a href="">ご案内</a></li>
@@ -41,19 +23,23 @@
         <li class="nav_item"><a href="">ご予約</a></li>
         <li class="nav_item"><a href="">採用情報</a></li>
       </ul>
-    </header> -->
+      <div class="menu-icon">
+        <input id="drawer_input" class="drawer_hidden" type="checkbox" />
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li class="nav_item"><a href="">はな亭について</a></li>
+            <li class="nav_item"><a href="">お料理</a></li>
+            <li class="nav_item"><a href="">ご案内</a></li>
+            <li class="nav_item"><a href="">アクセス</a></li>
+            <li class="nav_item"><a href="">ご予約</a></li>
+            <li class="nav_item"><a href="">採用情報</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <script>
-      var mobileMenu = document.getElementById("mobile-menu");
-      var navList = document.getElementById("nav-list");
-
-      mobileMenu.addEventListener("click", function () {
-        mobileMenu.classList.toggle("close"); // ハンバーガーメニューのアイコンを×印に切り替え
-        navList.classList.toggle("show");
-      });
-    </script>
     <section class="fv">
-      <!-- <h1>はな亭</h1> -->
       <div id="slide" class="bg">
         <img src="image/top-bg.jpeg" alt="はな亭" />
       </div>
@@ -82,9 +68,24 @@
       </div>
       <div class="inner">
         <div class="food_course">
-          <div>
-            <img src="image/title1.jpeg" alt="はな亭" />
+          <div class="img-frame">
+            <div class="img-01">
+              <img src="image/title1.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-02">
+              <img src="image/title2.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-03">
+              <img src="image/title3.jpeg" alt="はな亭" />
+            </div>
           </div>
+          <!-- <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div> -->
           <div>
             <p class="title">ランチコース</p>
             <p class="text">
@@ -101,9 +102,24 @@
           </div>
         </div>
         <div class="food_course">
-          <div>
-            <img src="image/title2.jpeg" alt="はな亭" />
+          <div class="img-frame">
+            <div class="img-01">
+              <img src="image/title1.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-02">
+              <img src="image/title2.jpeg" alt="はな亭" />
+            </div>
+            <div class="img-03">
+              <img src="image/title3.jpeg" alt="はな亭" />
+            </div>
           </div>
+          <!-- <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div> -->
           <div>
             <p class="title">ディナーコース</p>
             <p class="text">
@@ -122,13 +138,20 @@
           </div>
         </div>
       </div>
-      <!-- <div class="pc_inner">
-        <div class="pc_image">
-          <img src="image/title1.jpeg" alt="はな亭" />
-          <img src="image/title2.jpeg" alt="はな亭" />
-          <img src="image/title3.jpeg" alt="はな亭" />
-        </div>
+    </section>
+    <section class="pc_food">
+      <div class="title">
+        <h2>お料理</h2>
+      </div>
+      <div class="pc_inner">
         <div class="pc_food_course">
+          <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div>
           <div>
             <p class="title">ランチコース</p>
             <p class="text">
@@ -141,12 +164,19 @@
               接待(部屋)5.000 客室15%サービス30%カード10%
             </p>
           </div>
+          <div class="slide-container">
+            <div class="slide-wrapper">
+              <img class="slide" src="image/title1.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title2.jpeg" alt="はな亭" />
+              <img class="slide" src="image/title3.jpeg" alt="はな亭" />
+            </div>
+          </div>
           <div>
             <p class="title">ディナーコース</p>
             <p class="text">
               みに会席6.000(税込)
               <br />
-              部屋取り5.000≠
+              部屋取り5.000
               <br />
               15人以上の場合、3.500円で10%
               <br />
@@ -156,7 +186,7 @@
             </p>
           </div>
         </div>
-      </div> -->
+      </div>
     </section>
     <hr class="ussura" />
     <section class="guidance">
@@ -195,13 +225,13 @@
           </div>
         </div>
       </div>
-      <!-- <div class="pc_inner">
+      <div class="pc_inner">
         <div class="pc_image">
           <img src="image/title4.jpeg" alt="はな亭" />
           <img src="image/title5.jpeg" alt="はな亭" />
           <img src="image/title6.jpeg" alt="はな亭" />
         </div>
-      </div> -->
+      </div>
     </section>
     <hr class="ussura" />
     <section class="access">
@@ -210,12 +240,14 @@
         <p class="Bo">〒794-0024</p>
         <p>愛媛県今治市共栄町2-2-41</p>
         <iframe
-          src="url('https://maps.app.goo.gl/cQFTNY1LroxaLkAd9')"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.038893728218!2d132.99727837633614!3d34.068517216869765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a429c08d2cd%3A0x800ac38675ef8dee!2z44Gv44Gq5Lqt!5e0!3m2!1sja!2sjp!4v1703223358190!5m2!1sja!2sjp"
           width="355"
           height="355"
-          frameborder="0"
-        >
-        </iframe>
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <h1>TEL：0898-22-0351</h1>
         <p class="B_o">定休日</p>
         <p>不定休</p>
@@ -232,16 +264,18 @@
         </p>
       </div>
     </section>
-    <!-- <section class="PC_access">
+    <section class="PC_access">
       <h2>アクセス</h2>
       <div class="PC_title">
         <iframe
-          src="url('https://maps.app.goo.gl/cQFTNY1LroxaLkAd9')"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.038893728218!2d132.99727837633614!3d34.068517216869765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35503a429c08d2cd%3A0x800ac38675ef8dee!2z44Gv44Gq5Lqt!5e0!3m2!1sja!2sjp!4v1703223358190!5m2!1sja!2sjp"
           width="700"
           height="700"
-          frameborder="0"
-        >
-        </iframe>
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <div class="font">
           <p class="Bo">〒794-0024</p>
           <p>愛媛県今治市共栄町2-2-41</p>
@@ -262,8 +296,7 @@
         <br />
         ご了承の程よろしくお願い致します。
       </p>
-    </section> -->
-
+    </section>
     <footer>
       <h1>はな亭</h1>
       <div class="address">
