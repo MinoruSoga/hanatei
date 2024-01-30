@@ -46,10 +46,13 @@ a {
   text-decoration: none;
 }
 
+.ussura {
+  margin-bottom: 100px;
+}
+
 body {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +215,7 @@ body header > ul.nav_list {
   }
 }
 body section.fv {
-  padding-top: 111px;
+  padding-top: 90px;
 }
 body section.fv .bg {
   display: flex;
@@ -221,16 +224,16 @@ body section.fv .bg {
 body section.fv .bg img {
   width: 100%;
   height: 750px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  margin-bottom: 60px;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   body section.fv .bg img {
     max-width: 1200px;
     height: 560px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin-top: 57px;
+    object-fit: cover;
+    margin-top: 60px;
+    margin-bottom: 120px;
   }
 }
 body section.about {
@@ -254,7 +257,6 @@ body section.about .inner h2 {
 @media screen and (min-width: 768px) {
   body section.about .inner h2 {
     font-size: 40px;
-    margin-top: 57px;
   }
 }
 body section.about .inner p {
@@ -273,35 +275,24 @@ body section.about .inner p {
 body section.about .inner img {
   width: 355px;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   body section.about .inner img {
     width: 1000px;
     height: 400px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin-top: 32px;
-    margin-bottom: 47px;
+    margin-bottom: 80px;
   }
 }
-body .title {
+body section.food .title {
+  display: block;
   text-align: center;
 }
-body .title h2 {
+body section.food .title h2 {
   font-size: 32px;
   margin-bottom: 51px;
-}
-@media screen and (min-width: 768px) {
-  body .title h2 {
-    margin-top: 47px;
-  }
-}
-@media screen and (min-width: 768px) {
-  body section.food .title h2 {
-    font-size: 40px;
-  }
 }
 body section.food .inner {
   width: 90%;
@@ -344,8 +335,7 @@ body section.food .inner .food_course .img-frame .img-02 img,
 body section.food .inner .food_course .img-frame .img-03 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 body section.food .inner .food_course .img-frame .img-01 {
   animation: slide-animation-01 24s infinite;
@@ -417,21 +407,21 @@ body section.food .inner .food_course .img-frame .img-03 {
     transform: scale(1.1);
   }
 }
-body section.food .title {
+body section.food .inner .title {
   font-size: 20px;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  body section.food .title {
+  body section.food .inner .title {
     display: none;
   }
 }
-body section.food .text {
+body section.food .inner .text {
   font-size: 10px;
   line-height: 2.4;
 }
 @media screen and (min-width: 768px) {
-  body section.food .text {
+  body section.food .inner .text {
     display: none;
   }
 }
@@ -439,10 +429,21 @@ body .pc_food {
   display: none;
 }
 @media screen and (min-width: 768px) {
+  body section.food {
+    display: none;
+  }
   body .pc_food {
+    width: 90%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
     display: block;
     justify-content: center;
     align-items: center;
+  }
+  body .pc_food .title {
+    display: block;
+    text-align: center;
   }
   body .pc_food .title h2 {
     font-size: 40px;
@@ -457,15 +458,13 @@ body .pc_food {
   }
   body .pc_food .pc_inner .slide-container .slide-wrapper {
     display: flex;
-    width: -moz-max-content;
     width: max-content;
     animation: slide-flow 3s infinite linear 0.5s both;
   }
   body .pc_food .pc_inner .slide-container .slide {
     width: 100%;
     max-width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border: 1px solid black;
   }
   body .pc_food .pc_inner .img-frame {
@@ -493,11 +492,20 @@ body .pc_food {
   }
 }
 
+.guidance {
+  width: 90%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .guidance .title p {
   font-size: 14px;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
+  .guidance .title {
+    text-align: center;
+  }
   .guidance .title h2 {
     font-size: 40px;
   }
@@ -506,9 +514,6 @@ body .pc_food {
   }
 }
 .guidance .inner {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
   justify-content: space-between;
 }
 .guidance .inner .guidance_course {
@@ -527,9 +532,9 @@ body .pc_food {
 @media screen and (min-width: 768px) {
   .guidance .inner .guidance_course .text {
     font-size: 24px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
-    margin: 0 220px;
     margin-top: 60px;
     margin-bottom: 82px;
   }
@@ -546,28 +551,31 @@ body .pc_food {
 .guidance .inner .image img {
   width: 170px;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .guidance .pc_inner {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .guidance .pc_inner {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
     display: block;
-    width: 1020px;
     justify-content: center;
-    margin: 0 210px;
   }
   .guidance .pc_inner .pc_image {
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 120px;
+    overflow: hidden;
   }
   .guidance .pc_inner .pc_image img {
-    width: 333px;
-    height: 333px;
-    margin-bottom: 90px;
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
   }
 }
 
@@ -599,6 +607,9 @@ body .pc_food {
 
 @media screen and (min-width: 768px) {
   .PC_access {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
     display: block;
   }
   .PC_access h2 {
@@ -611,26 +622,24 @@ body .pc_food {
   }
   .PC_access .PC_title iframe {
     margin-top: 138px;
-    margin-left: 121px;
     margin-bottom: 90px;
   }
   .PC_access .PC_title .font {
-    text-align: center;
     line-height: 2.4;
     margin-top: 223px;
-    margin-left: 114px;
+    margin-left: 20px;
   }
   .PC_access .PC_title .font .Bo {
-    font-size: 24px;
+    font-size: 20px;
   }
   .PC_access .PC_title .font .B_o {
-    font-size: 32px;
+    font-size: 28px;
   }
   .PC_access .PC_title .font p {
     font-size: 20px;
   }
   .PC_access .PC_title .font h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   .PC_access .display {
     text-align: center;
@@ -709,15 +718,13 @@ footer .tel {
 .fv .bg_2 img {
   width: 100%;
   height: 190px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   .fv .bg_2 img {
     max-width: 1200px;
     height: 560px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin-top: 57px;
   }
 }

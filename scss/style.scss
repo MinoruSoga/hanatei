@@ -55,6 +55,9 @@ figure {
 a {
   text-decoration: none;
 }
+.ussura {
+  margin-bottom: 100px;
+}
 
 body {
   width: 100%;
@@ -225,19 +228,21 @@ body {
     }
   }
   section.fv {
-    padding-top: 111px;
+    padding-top: 90px;
     .bg {
       display: flex;
       justify-content: center;
       img {
         width: 100%;
         height: 750px;
+        margin-bottom: 60px;
         object-fit: cover;
         @include media(md) {
           max-width: 1200px;
           height: 560px;
           object-fit: cover;
-          margin-top: 57px;
+          margin-top: 60px;
+          margin-bottom: 120px;
         }
       }
     }
@@ -259,7 +264,6 @@ body {
         margin-bottom: 13px;
         @include media(md) {
           font-size: 40px;
-          margin-top: 57px;
         }
       }
       p {
@@ -282,27 +286,18 @@ body {
           height: 400px;
           object-fit: cover;
           margin-top: 32px;
-          margin-bottom: 47px;
+          margin-bottom: 80px;
         }
-      }
-    }
-  }
-  .title {
-    text-align: center;
-    h2 {
-      font-size: 32px;
-      margin-bottom: 51px;
-      @include media(md) {
-        margin-top: 47px;
       }
     }
   }
   section.food {
-    @include media(md) {
-      .title {
-        h2 {
-          font-size: 40px;
-        }
+    .title {
+      display: block;
+      text-align: center;
+      h2 {
+        font-size: 32px;
+        margin-bottom: 51px;
       }
     }
     .inner {
@@ -420,19 +415,20 @@ body {
           }
         }
       }
-    }
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      @include media(md) {
-        display: none;
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        @include media(md) {
+          display: none;
+        }
       }
-    }
-    .text {
-      font-size: 10px;
-      line-height: 2.4;
-      @include media(md) {
-        display: none;
+      .text {
+        font-size: 10px;
+        line-height: 2.4;
+        @include media(md) {
+          display: none;
+        }
       }
     }
   }
@@ -440,11 +436,20 @@ body {
     display: none;
   }
   @include media(md) {
+    section.food {
+      display: none;
+    }
     .pc_food {
+      width: 90%;
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;
       display: block;
       justify-content: center;
       align-items: center;
       .title {
+        display: block;
+        text-align: center;
         h2 {
           font-size: 40px;
         }
@@ -506,6 +511,10 @@ body {
   }
 }
 .guidance {
+  width: 90%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
   .title {
     p {
       font-size: 14px;
@@ -514,6 +523,7 @@ body {
   }
   @include media(md) {
     .title {
+      text-align: center;
       h2 {
         font-size: 40px;
       }
@@ -523,9 +533,6 @@ body {
     }
   }
   .inner {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
     justify-content: space-between;
     .guidance_course {
       display: flex;
@@ -542,9 +549,9 @@ body {
       @include media(md) {
         .text {
           font-size: 24px;
-          margin: auto;
+          margin-left: auto;
+          margin-right: auto;
           text-align: left;
-          margin: 0 220px;
           margin-top: 60px;
           margin-bottom: 82px;
         }
@@ -567,18 +574,22 @@ body {
   .pc_inner {
     display: none;
     @include media(md) {
+      max-width: 1000px;
+      margin-right: auto;
+      margin-left: auto;
       display: block;
-      width: 1020px;
       justify-content: center;
-      margin: 0 210px;
       .pc_image {
+        max-width: 1000px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 120px;
+        overflow: hidden;
         img {
-          width: 333px;
-          height: 333px;
-          margin-bottom: 90px;
+          width: 325px;
+          height: 325px;
+          object-fit: cover;
         }
       }
     }
@@ -608,6 +619,9 @@ body {
 }
 @include media(md) {
   .PC_access {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
     display: block;
     h2 {
       text-align: center;
@@ -619,25 +633,23 @@ body {
 
       iframe {
         margin-top: 138px;
-        margin-left: 121px;
         margin-bottom: 90px;
       }
       .font {
-        text-align: center;
         line-height: 2.4;
         margin-top: 223px;
-        margin-left: 114px;
+        margin-left: 20px;
         .Bo {
-          font-size: 24px;
+          font-size: 20px;
         }
         .B_o {
-          font-size: 32px;
+          font-size: 28px;
         }
         p {
           font-size: 20px;
         }
         h1 {
-          font-size: 36px;
+          font-size: 28px;
         }
       }
     }
