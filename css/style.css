@@ -48,6 +48,12 @@ a {
 
 .ussura {
   margin-bottom: 80px;
+  max-width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .ussura {
+    max-width: 1000px;
+  }
 }
 
 body {
@@ -455,32 +461,31 @@ body .pc_food {
     display: block;
     margin-bottom: 100px;
   }
-  body .pc_food .pc_inner .slide-container {
+  body .pc_food .pc_inner .bx-wrapper {
+    max-width: 3000px;
+  }
+  body .pc_food .pc_inner .bx-wrapper .bx-viewport {
     width: 100%;
-    margin-bottom: 60px;
     overflow: hidden;
+    position: relative;
+    height: 333px;
   }
-  body .pc_food .pc_inner .slide-container .slide-wrapper {
-    display: flex;
-    width: max-content;
-    animation: slide-flow 3s infinite linear 0.5s both;
+  body .pc_food .pc_inner .bx-wrapper .bx-viewport .bxslider {
+    width: 1215%;
+    position: relative;
+    transition-duration: 2s;
+    transform: translate3d(-2039.97px, 0px, 0px);
   }
-  body .pc_food .pc_inner .slide-container .slide-wrapper .slide {
-    width: 100%;
+  body .pc_food .pc_inner .bx-wrapper .bx-viewport .bxslider .bx-clone {
+    float: left;
+    list-style: none;
+    position: relative;
+    width: 333.333px;
+  }
+  body .pc_food .pc_inner .bx-wrapper .bx-viewport .bxslider .bx-clone img {
     max-width: 100%;
-    object-fit: cover;
-    border: 1px solid black;
-  }
-  body .pc_food .pc_inner .img-frame {
-    display: none;
-  }
-  @keyframes slide-flow {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+    display: block;
+    border: 0;
   }
   body .pc_food .pc_inner .pc_course {
     justify-content: space-between;
@@ -665,7 +670,7 @@ body .pc_food {
   margin-bottom: 40px;
 }
 .access .title .font .underline {
-  border: 1px solid #000;
+  border: 1px solid #6a6868;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -689,61 +694,53 @@ body .pc_food {
 footer {
   background-color: black;
   color: white;
-  padding: 20px;
   height: 150px;
   width: 100%;
-  box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
   footer {
-    height: 390px;
+    height: 300px;
   }
 }
-footer h1 {
+footer .inner {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+footer .inner h1 {
   font-size: 24px;
   margin-bottom: 35px;
 }
 @media screen and (min-width: 768px) {
-  footer h1 {
-    font-size: 64px;
-    margin-top: 55px;
-    margin-left: 116px;
+  footer .inner h1 {
+    font-size: 45px;
     margin-bottom: 50px;
   }
 }
-footer .address {
+footer .inner .address {
   display: flex;
   gap: 10px;
 }
-footer p {
+footer .inner p {
   line-height: 1;
   font-size: 10px;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
-  footer p {
+  footer .inner p {
     font-size: 20px;
-    margin-bottom: 29px;
+    margin-bottom: 20px;
   }
 }
-footer .fo {
-  margin: 0;
+footer .inner .number {
+  display: flex;
+  gap: 10px;
 }
 @media screen and (min-width: 768px) {
-  footer .fo {
-    font-size: 24px;
-    margin-left: 116px;
-    margin-bottom: 29px;
-  }
-}
-footer .tel {
-  font-size: 15px;
-  font-weight: bold;
-}
-@media screen and (min-width: 768px) {
-  footer .tel {
-    font-size: 32px;
-    margin-bottom: 29px;
+  footer .inner .number p {
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 }
 
