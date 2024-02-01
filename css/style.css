@@ -230,7 +230,7 @@ body section.fv .bg img {
 @media screen and (min-width: 768px) {
   body section.fv .bg img {
     max-width: 1200px;
-    height: 560px;
+    height: 450px;
     object-fit: cover;
     margin-top: 60px;
     margin-bottom: 120px;
@@ -249,28 +249,25 @@ body section.about .inner {
   margin-left: auto;
   margin-bottom: 80px;
 }
-body section.about .inner h2 {
-  font-size: 32px;
-  color: black;
-  margin-top: 12px;
-  margin-bottom: 13px;
-}
 @media screen and (min-width: 768px) {
-  body section.about .inner h2 {
-    font-size: 40px;
+  body section.about .inner {
+    margin-bottom: 120px;
   }
 }
+body section.about .inner h2 {
+  font-size: 26px;
+  color: black;
+  margin-bottom: 60px;
+}
 body section.about .inner p {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
   line-height: 2;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   body section.about .inner p {
-    font-size: 24px;
-    text-align: left;
-    margin-top: 60px;
+    margin-bottom: 80px;
   }
 }
 body section.about .inner img {
@@ -283,8 +280,6 @@ body section.about .inner img {
     width: 1000px;
     height: 400px;
     object-fit: cover;
-    margin-top: 32px;
-    margin-bottom: 80px;
   }
 }
 body section.food .title {
@@ -293,7 +288,7 @@ body section.food .title {
 }
 body section.food .title h2 {
   font-size: 32px;
-  margin-bottom: 51px;
+  margin-bottom: 60px;
 }
 body section.food .inner {
   width: 90%;
@@ -302,7 +297,6 @@ body section.food .inner {
   margin-bottom: 80px;
 }
 body section.food .inner .food_course {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -312,11 +306,11 @@ body section.food .inner .food_course div {
 }
 body section.food .inner .food_course .img-frame {
   position: relative;
-  width: 165px;
+  width: 100%;
   height: 195px;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   body section.food .inner .food_course .img-frame {
@@ -338,6 +332,7 @@ body section.food .inner .food_course .img-frame .img-03 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  align-items: center;
 }
 body section.food .inner .food_course .img-frame .img-01 {
   animation: slide-animation-01 24s infinite;
@@ -409,21 +404,26 @@ body section.food .inner .food_course .img-frame .img-03 {
     transform: scale(1.1);
   }
 }
-body section.food .inner .title {
+body section.food .inner .launch {
+  margin-bottom: 40px;
+  align-items: center;
+}
+body section.food .inner .launch .title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
-  body section.food .inner .title {
+  body section.food .inner .launch .title {
     display: none;
   }
 }
-body section.food .inner .text {
-  font-size: 10px;
-  line-height: 2.4;
+body section.food .inner .launch .text {
+  font-size: 14px;
+  line-height: 2;
 }
 @media screen and (min-width: 768px) {
-  body section.food .inner .text {
+  body section.food .inner .launch .text {
     display: none;
   }
 }
@@ -448,22 +448,24 @@ body .pc_food {
     text-align: center;
   }
   body .pc_food .title h2 {
-    font-size: 40px;
+    font-size: 26px;
+    margin-bottom: 80px;
   }
   body .pc_food .pc_inner {
     display: block;
+    margin-bottom: 100px;
   }
   body .pc_food .pc_inner .slide-container {
     width: 100%;
-    margin: 20px auto;
-    margin: 20px auto;
+    margin-bottom: 60px;
+    overflow: hidden;
   }
   body .pc_food .pc_inner .slide-container .slide-wrapper {
     display: flex;
     width: max-content;
     animation: slide-flow 3s infinite linear 0.5s both;
   }
-  body .pc_food .pc_inner .slide-container .slide {
+  body .pc_food .pc_inner .slide-container .slide-wrapper .slide {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -480,17 +482,19 @@ body .pc_food {
       transform: translateX(-100%);
     }
   }
-  body .pc_food .pc_inner .title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 90px;
-    margin-bottom: 34px;
+  body .pc_food .pc_inner .pc_course {
+    justify-content: space-between;
   }
-  body .pc_food .pc_inner .text {
-    font-size: 24px;
+  body .pc_food .pc_inner .pc_course .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  body .pc_food .pc_inner .pc_course .text {
+    font-size: 16px;
     text-align: center;
-    line-height: 3.5;
-    margin-bottom: 45px;
+    line-height: 2.2;
+    margin-bottom: 60px;
   }
 }
 
@@ -500,60 +504,25 @@ body .pc_food {
   margin-right: auto;
   margin-left: auto;
 }
+.guidance .title {
+  text-align: center;
+  margin-bottom: 60px;
+}
 .guidance .title p {
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .guidance .title {
     text-align: center;
   }
   .guidance .title h2 {
-    font-size: 40px;
+    font-size: 26px;
   }
   .guidance .title p {
-    font-size: 24px;
+    font-size: 16px;
   }
-}
-.guidance .inner {
-  justify-content: space-between;
-}
-.guidance .inner .guidance_course {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.guidance .inner .guidance_course div {
-  text-align: center;
-  line-height: 1.4;
-}
-.guidance .inner .guidance_course .text {
-  font-size: 18px;
-  line-height: 2.4;
-}
-@media screen and (min-width: 768px) {
-  .guidance .inner .guidance_course .text {
-    font-size: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    margin-top: 60px;
-    margin-bottom: 82px;
-  }
-}
-.guidance .inner .image {
-  display: flex;
-  justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .guidance .inner .image {
-    display: none;
-  }
-}
-.guidance .inner .image img {
-  width: 170px;
-  height: 200px;
-  object-fit: cover;
 }
 .guidance .pc_inner {
   display: none;
@@ -571,7 +540,7 @@ body .pc_food {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     overflow: hidden;
   }
   .guidance .pc_inner .pc_image img {
@@ -580,85 +549,143 @@ body .pc_food {
     object-fit: cover;
   }
 }
+.guidance .inner {
+  justify-content: space-between;
+}
+.guidance .inner .guidance_course {
+  align-items: center;
+}
+.guidance .inner .guidance_course .guidance_text {
+  text-align: center;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .guidance .inner .guidance_course .guidance_text {
+    margin-bottom: 100px;
+  }
+}
+.guidance .inner .guidance_course .guidance_text .text_2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .guidance .inner .guidance_course .guidance_text .text_2 {
+    font-size: 18px;
+  }
+}
+.guidance .inner .guidance_course .guidance_text .text_3 {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .guidance .inner .guidance_course .guidance_text .text_3 {
+    font-size: 16px;
+  }
+}
+.guidance .inner .guidance_course .guidance_text .text_4 {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.guidance .inner .guidance_course .guidance_text .text_1 {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 80px;
+}
+.guidance .inner .image {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+@media screen and (min-width: 768px) {
+  .guidance .inner .image {
+    display: none;
+  }
+}
+.guidance .inner .image img {
+  width: 170px;
+  height: 200px;
+  object-fit: cover;
+}
 
 .access {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
   display: block;
 }
 @media screen and (min-width: 768px) {
   .access {
-    display: none;
-  }
-}
-.access h1 {
-  margin-bottom: 35px;
-}
-.access .Bo {
-  font-size: 14px;
-  font-weight: bold;
-}
-.access .B_o {
-  font-size: 20px;
-}
-.access p {
-  margin-bottom: 35px;
-}
-
-.PC_access {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .PC_access {
     max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-  }
-  .PC_access h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 95px;
-  }
-  .PC_access .PC_title {
-    display: flex;
-  }
-  .PC_access .PC_title iframe {
-    margin-top: 100px;
-    margin-bottom: 90px;
-  }
-  .PC_access .PC_title .font {
-    margin-top: 100px;
-    margin-left: 20px;
-    line-height: 1.5;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-  .PC_access .PC_title .font .reservation {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-  .PC_access .PC_title .font .tel {
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
-  .PC_access .PC_title .font .underline {
-    border: 1px solid #000;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-  }
-  .PC_access .PC_title .font p {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  .PC_access .PC_title .font .display {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 53px;
   }
 }
+.access h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 60px;
+}
+.access .title {
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 768px) {
+  .access .title {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 768px) {
+  .access .title iframe {
+    width: 50%;
+    max-height: 445px;
+  }
+}
+.access .title .font {
+  width: 100%;
+  margin-left: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .access .title .font {
+    width: 50%;
+  }
+}
+.access .title .font .reservation {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.access .title .font .tel {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.access .title .font .underline {
+  border: 1px solid #000;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+.access .title .font p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.access .title .font .display {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 53px;
+}
+@media screen and (min-width: 768px) {
+  .access .title .font .display {
+    margin-bottom: 0;
+  }
+}
+
 footer {
   background-color: black;
   color: white;
