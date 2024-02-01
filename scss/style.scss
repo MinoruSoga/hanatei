@@ -239,7 +239,7 @@ body {
         object-fit: cover;
         @include media(md) {
           max-width: 1200px;
-          height: 560px;
+          height: 450px;
           object-fit: cover;
           margin-top: 60px;
           margin-bottom: 120px;
@@ -258,24 +258,21 @@ body {
       margin-right: auto;
       margin-left: auto;
       margin-bottom: 80px;
+      @include media(md) {
+        margin-bottom: 120px;
+      }
       h2 {
-        font-size: 32px;
+        font-size: 26px;
         color: black;
-        margin-top: 12px;
-        margin-bottom: 13px;
-        @include media(md) {
-          font-size: 40px;
-        }
+        margin-bottom: 60px;
       }
       p {
-        font-size: 18px;
+        font-size: 16px;
         color: black;
         line-height: 2;
-        margin-bottom: 25px;
+        margin-bottom: 60px;
         @include media(md) {
-          font-size: 24px;
-          text-align: left;
-          margin-top: 60px;
+          margin-bottom: 80px;
         }
       }
       img {
@@ -286,8 +283,6 @@ body {
           width: 1000px;
           height: 400px;
           object-fit: cover;
-          margin-top: 32px;
-          margin-bottom: 80px;
         }
       }
     }
@@ -298,7 +293,7 @@ body {
       text-align: center;
       h2 {
         font-size: 32px;
-        margin-bottom: 51px;
+        margin-bottom: 60px;
       }
     }
     .inner {
@@ -307,7 +302,6 @@ body {
       margin-left: auto;
       margin-bottom: 80px;
       .food_course {
-        display: flex;
         justify-content: space-between;
         align-items: center;
         div {
@@ -316,11 +310,11 @@ body {
         }
         .img-frame {
           position: relative;
-          width: 165px;
+          width: 100%;
           height: 195px;
           overflow: hidden;
           margin: 0 auto;
-          margin-bottom: 5px;
+          margin-bottom: 60px;
           @include media(md) {
             display: none;
           }
@@ -337,6 +331,7 @@ body {
               width: 100%;
               height: 100%;
               object-fit: cover;
+              align-items: center;
             }
           }
           .img-01 {
@@ -416,19 +411,23 @@ body {
           }
         }
       }
-
-      .title {
-        font-size: 20px;
-        font-weight: bold;
-        @include media(md) {
-          display: none;
+      .launch {
+        margin-bottom: 40px;
+        align-items: center;
+        .title {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          @include media(md) {
+            display: none;
+          }
         }
-      }
-      .text {
-        font-size: 10px;
-        line-height: 2.4;
-        @include media(md) {
-          display: none;
+        .text {
+          font-size: 14px;
+          line-height: 2;
+          @include media(md) {
+            display: none;
+          }
         }
       }
     }
@@ -452,35 +451,36 @@ body {
         display: block;
         text-align: center;
         h2 {
-          font-size: 40px;
+          font-size: 26px;
+          margin-bottom: 80px;
         }
       }
       .pc_inner {
         display: block;
+        margin-bottom: 100px;
         $slide-container-margin: 20px;
         $slide-duration: 3s;
         $slide-delay: 0.5s;
         $max-width: 100%;
         .slide-container {
           width: $max-width;
-          margin: $slide-container-margin auto;
+          margin-bottom: 60px;
           // display: flex;
           // align-items: center;
-          // overflow: hidden;
-          margin: 20px auto;
+          overflow: hidden;
 
           .slide-wrapper {
             display: flex;
             width: max-content;
             animation: slide-flow $slide-duration infinite linear $slide-delay
               both;
-          }
 
-          .slide {
-            width: 100%;
-            max-width: $max-width;
-            object-fit: cover;
-            border: 1px solid black;
+            .slide {
+              width: 100%;
+              max-width: $max-width;
+              object-fit: cover;
+              border: 1px solid black;
+            }
           }
         }
         .img-frame {
@@ -495,17 +495,19 @@ body {
             transform: translateX(-100%);
           }
         }
-        .title {
-          font-size: 32px;
-          font-weight: bold;
-          margin-top: 90px;
-          margin-bottom: 34px;
-        }
-        .text {
-          font-size: 24px;
-          text-align: center;
-          line-height: 3.5;
-          margin-bottom: 45px;
+        .pc_course {
+          justify-content: space-between;
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+          }
+          .text {
+            font-size: 16px;
+            text-align: center;
+            line-height: 2.2;
+            margin-bottom: 60px;
+          }
         }
       }
     }
@@ -517,61 +519,25 @@ body {
   margin-right: auto;
   margin-left: auto;
   .title {
+    text-align: center;
+    margin-bottom: 60px;
     p {
       font-size: 14px;
       font-weight: bold;
+      text-align: center;
     }
   }
   @include media(md) {
     .title {
       text-align: center;
       h2 {
-        font-size: 40px;
+        font-size: 26px;
       }
       p {
-        font-size: 24px;
+        font-size: 16px;
       }
     }
   }
-  .inner {
-    justify-content: space-between;
-    .guidance_course {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      div {
-        text-align: center;
-        line-height: 1.4;
-      }
-      .text {
-        font-size: 18px;
-        line-height: 2.4;
-      }
-      @include media(md) {
-        .text {
-          font-size: 24px;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: left;
-          margin-top: 60px;
-          margin-bottom: 82px;
-        }
-      }
-    }
-    .image {
-      display: flex;
-      justify-content: space-between;
-      @include media(md) {
-        display: none;
-      }
-      img {
-        width: 170px;
-        height: 200px;
-        object-fit: cover;
-      }
-    }
-  }
-
   .pc_inner {
     display: none;
     @include media(md) {
@@ -585,7 +551,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 120px;
+        margin-bottom: 80px;
         overflow: hidden;
         img {
           width: 325px;
@@ -595,83 +561,203 @@ body {
       }
     }
   }
+  .inner {
+    justify-content: space-between;
+    .guidance_course {
+      align-items: center;
+      .guidance_text {
+        text-align: center;
+        line-height: 1.4;
+        @include media(md) {
+          margin-bottom: 100px;
+        }
+        .text_2 {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          @include media(md) {
+            font-size: 18px;
+          }
+        }
+        .text_3 {
+          font-size: 15px;
+          line-height: 2;
+          margin-bottom: 40px;
+          @include media(md) {
+            font-size: 16px;
+          }
+        }
+        .text_4 {
+          font-size: 16px;
+          line-height: 1.8;
+          margin-bottom: 40px;
+        }
+        .text_1 {
+          font-size: 14px;
+          line-height: 1.8;
+          margin-bottom: 80px;
+        }
+      }
+    }
+    .image {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      @include media(md) {
+        display: none;
+      }
+      img {
+        width: 170px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
 }
+// .access {
+//   display: block;
+//   width: 90%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 80px;
+//   @include media(md) {
+//     display: none;
+//   }
+//   h2 {
+//     font-size: 26px;
+//     margin-bottom: 35px;
+//   }
+//   .Bo {
+//     font-size: 14px;
+//     font-weight: bold;
+//   }
+//   .B_o {
+//     font-size: 20px;
+//   }
+// }
+// .PC_access {
+//   display: none;
+// }
+// @include media(md) {
+//   .PC_access {
+//     max-width: 1000px;
+//     margin-right: auto;
+//     margin-left: auto;
+//     display: block;
+//     h2 {
+//       text-align: center;
+//       font-size: 26px;
+//     }
+//     .PC_title {
+//       display: flex;
+//       margin-bottom: 80px;
+//       iframe {
+//         margin-top: 100px;
+//         margin-bottom: 90px;
+//       }
+//       .font {
+//         margin-top: 100px;
+//         margin-left: 20px;
+//         line-height: 1.5;
+//         text-align: center;
+//         margin-left: auto;
+//         margin-right: auto;
+//         .reservation {
+//           font-size: 16px;
+//           margin-bottom: 8px;
+//         }
+
+//         .tel {
+//           font-size: 22px;
+//           margin-bottom: 40px;
+//         }
+//         .underline {
+//           border: 1px solid #000;
+//           width: 80%;
+//           margin-left: auto;
+//           margin-right: auto;
+//           margin-bottom: 40px;
+//         }
+//         p {
+//           font-size: 16px;
+//           margin-bottom: 20px;
+//         }
+//         .display {
+//           text-align: center;
+//           font-size: 16px;
+//           margin-bottom: 53px;
+//         }
+//       }
+//     }
 .access {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
   display: block;
   @include media(md) {
-    display: none;
-  }
-  h1 {
-    margin-bottom: 35px;
-  }
-  .Bo {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .B_o {
-    font-size: 20px;
-  }
-  p {
-    margin-bottom: 35px;
-  }
-}
-.PC_access {
-  display: none;
-}
-@include media(md) {
-  .PC_access {
     max-width: 1000px;
-    margin-right: auto;
     margin-left: auto;
-    display: block;
-    h2 {
-      text-align: center;
-      font-size: 40px;
-      margin-top: 95px;
-    }
-    .PC_title {
+    margin-right: auto;
+  }
+  h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 60px;
+  }
+  .title {
+    margin-bottom: 80px;
+    @include media(md) {
       display: flex;
-
-      iframe {
-        margin-top: 100px;
-        margin-bottom: 90px;
+      flex-direction: row-reverse;
+    }
+    iframe {
+      @include media(md) {
+        width: 50%;
+        max-height: 445px;
       }
-      .font {
-        margin-top: 100px;
-        margin-left: 20px;
-        line-height: 1.5;
-        text-align: center;
+    }
+    .font {
+      width: 100%;
+      margin-left: 20px;
+      line-height: 1.5;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      @include media(md) {
+        width: 50%;
+      }
+      .reservation {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .tel {
+        font-size: 22px;
+        margin-bottom: 40px;
+      }
+      .underline {
+        border: 1px solid #000;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
-        .reservation {
-          font-size: 22px;
-          margin-bottom: 8px;
-        }
-
-        .tel {
-          font-size: 32px;
-          margin-bottom: 40px;
-        }
-        .underline {
-          border: 1px solid #000;
-          width: 80%;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 40px;
-        }
-        p {
-          font-size: 22px;
-          margin-bottom: 20px;
-        }
-        .display {
-          text-align: center;
-          font-size: 16px;
-          margin-bottom: 53px;
+        margin-bottom: 40px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .display {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 53px;
+        @include media(md) {
+          margin-bottom: 0;
         }
       }
     }
   }
 }
+// }
 
 footer {
   background-color: black;
