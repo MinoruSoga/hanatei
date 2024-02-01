@@ -57,6 +57,10 @@ a {
 }
 .ussura {
   margin-bottom: 80px;
+  max-width: 90%;
+  @include media(md) {
+    max-width: 1000px;
+  }
 }
 
 body {
@@ -462,39 +466,65 @@ body {
         $slide-duration: 3s;
         $slide-delay: 0.5s;
         $max-width: 100%;
-        .slide-container {
-          width: $max-width;
-          margin-bottom: 60px;
-          // display: flex;
-          // align-items: center;
-          overflow: hidden;
-
-          .slide-wrapper {
-            display: flex;
-            width: max-content;
-            animation: slide-flow $slide-duration infinite linear $slide-delay
-              both;
-
-            .slide {
-              width: 100%;
-              max-width: $max-width;
-              object-fit: cover;
-              border: 1px solid black;
+        .bx-wrapper {
+          max-width: 3000px;
+          .bx-viewport {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 333px;
+            .bxslider {
+              width: 1215%;
+              position: relative;
+              transition-duration: 2s;
+              transform: translate3d(-2039.97px, 0px, 0px);
+              .bx-clone {
+                float: left;
+                list-style: none;
+                position: relative;
+                width: 333.333px;
+                img {
+                  max-width: 100%;
+                  display: block;
+                  border: 0;
+                }
+              }
             }
           }
         }
-        .img-frame {
-          display: none;
-        }
+        // .slide-container {
+        //   width: $max-width;
+        //   margin-bottom: 60px;
+        //   // display: flex;
+        //   // align-items: center;
+        //   overflow: hidden;
 
-        @keyframes slide-flow {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
+        //   .slide-wrapper {
+        //     display: flex;
+        //     width: max-content;
+        //     animation: slide-flow $slide-duration infinite linear $slide-delay
+        //       both;
+
+        //     .slide {
+        //       width: 100%;
+        //       max-width: $max-width;
+        //       object-fit: cover;
+        //       border: 1px solid black;
+        //     }
+        //   }
+        // }
+        // .img-frame {
+        //   display: none;
+        // }
+
+        // @keyframes slide-flow {
+        //   0% {
+        //     transform: translateX(0);
+        //   }
+        //   100% {
+        //     transform: translateX(-100%);
+        //   }
+        // }
         .pc_course {
           justify-content: space-between;
           .title {
@@ -736,7 +766,7 @@ body {
         margin-bottom: 40px;
       }
       .underline {
-        border: 1px solid #000;
+        border: 1px solid #6a6868;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -762,50 +792,46 @@ body {
 footer {
   background-color: black;
   color: white;
-  padding: 20px;
   height: 150px;
   width: 100%;
-  box-sizing: border-box;
   @include media(md) {
-    height: 390px;
+    height: 300px;
   }
-  h1 {
-    font-size: 24px;
-    margin-bottom: 35px;
-    @include media(md) {
-      font-size: 64px;
-      margin-top: 55px;
-      margin-left: 116px;
-      margin-bottom: 50px;
-    }
-  }
-  .address {
-    display: flex;
-    gap: 10px;
-  }
-  p {
-    line-height: 1;
-    font-size: 10px;
-    margin-bottom: 10px;
-    @include media(md) {
-      font-size: 20px;
-      margin-bottom: 29px;
-    }
-  }
-  .fo {
-    margin: 0;
-    @include media(md) {
+  .inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    h1 {
       font-size: 24px;
-      margin-left: 116px;
-      margin-bottom: 29px;
+      margin-bottom: 35px;
+      @include media(md) {
+        font-size: 45px;
+        margin-bottom: 50px;
+      }
     }
-  }
-  .tel {
-    font-size: 15px;
-    font-weight: bold;
-    @include media(md) {
-      font-size: 32px;
-      margin-bottom: 29px;
+    .address {
+      display: flex;
+      gap: 10px;
+    }
+    p {
+      line-height: 1;
+      font-size: 10px;
+      margin-bottom: 10px;
+      @include media(md) {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    .number {
+      display: flex;
+      gap: 10px;
+      p {
+        @include media(md) {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }
