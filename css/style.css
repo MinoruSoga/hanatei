@@ -62,7 +62,15 @@ a {
 
 body {
   width: 100%;
-  background: url("../image/background.jpeg") no-repeat center center fixed;
+}
+body #bg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../image/background.jpeg");
   background-size: cover;
 }
 body .pc {
@@ -74,38 +82,6 @@ body .pc {
   }
   body .pc {
     display: block;
-  }
-}
-body #loader {
-  z-index: 100;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: url("../image/background.jpeg") no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body #loader .dot {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: 0 5px;
-  background: #000;
-  animation: load 1.2s ease infinite;
-}
-@keyframes load {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
   }
 }
 body header {
