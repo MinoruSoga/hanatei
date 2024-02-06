@@ -16,31 +16,29 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
     />
   </head>
-  <body style="background-image: url('image/background.jpeg')">
+  <body>
     <header>
       <a class="logo-link" href="/">
         <img src="image/Logo.png" alt="Your Logo" class="logo" />
         <h1 class="">はな亭</h1>
       </a>
       <ul class="nav_list">
-        <li class="nav_item"><a href="">はな亭について</a></li>
-        <li class="nav_item"><a href="">お料理</a></li>
-        <li class="nav_item"><a href="">ご案内</a></li>
-        <li class="nav_item"><a href="">アクセス</a></li>
-        <li class="nav_item"><a href="">ご予約</a></li>
-        <li class="nav_item"><a href="">採用情報</a></li>
+        <li class="nav_item"><a href="/#about">はな亭について</a></li>
+        <li class="nav_item"><a href="/#food">お料理</a></li>
+        <li class="nav_item"><a href="/#guide">ご案内</a></li>
+        <li class="nav_item"><a href="/#access">アクセス・ご予約</a></li>
+        <li class="nav_item"><a href="recruit.html">採用情報</a></li>
       </ul>
       <div class="menu-icon">
         <input id="drawer_input" class="drawer_hidden" type="checkbox" />
         <label for="drawer_input" class="drawer_open"><span></span></label>
         <nav class="nav_content">
           <ul class="nav_list">
-            <li class="nav_item"><a href="">はな亭について</a></li>
-            <li class="nav_item"><a href="">お料理</a></li>
-            <li class="nav_item"><a href="">ご案内</a></li>
-            <li class="nav_item"><a href="">アクセス</a></li>
-            <li class="nav_item"><a href="">ご予約</a></li>
-            <li class="nav_item"><a href="">採用情報</a></li>
+            <li class="nav_item"><a href="index.html#about">はな亭について</a></li>
+            <li class="nav_item"><a href="index.html#food">お料理</a></li>
+            <li class="nav_item"><a href="index.html#guide">ご案内</a></li>
+            <li class="nav_item"><a href="index.html#access">アクセス・ご予約</a></li>
+            <li class="nav_item"><a href="recruit.html">採用情報</a></li>
           </ul>
         </nav>
       </div>
@@ -51,7 +49,7 @@
         <img src="image/top-bg.jpeg" alt="はな亭" />
       </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <div class="inner">
         <h2>はな亭について</h2>
         <p>
@@ -65,7 +63,7 @@
       </div>
     </section>
     <hr class="ussura" />
-    <section class="food">
+    <section id="food" class="food">
       <div class="title">
         <h2>お料理</h2>
       </div>
@@ -186,7 +184,7 @@
       </div>
     </section>
     <hr class="ussura" />
-    <section class="guidance">
+    <section id="guide" class="guidance">
       <div class="title">
         <h2>ご案内</h2>
         <p>はな亭 慶事・法事の折詰</p>
@@ -248,12 +246,12 @@
       </div>
     </section>
     <hr class="ussura" />
-    <section class="access">
+    <section id="access" class="access">
       <h2>アクセス</h2>
       <div class="title">
         <div class="font">
           <p class="reservation">ご予約はお電話で</p>
-          <h1 class="tel">TEL：<a>0898-22-0351</a></h1>
+          <h1 class="tel">TEL：<a href="tel:0898-22-0351">0898-22-0351</a></h1>
           <p class="underline"></p>
           <p>〒794-0024<br />愛媛県今治市共栄町2-2-41</p>
           <p>定休日：不定休</p>
@@ -290,7 +288,7 @@
         </div>
         <div class="number">
           <p>TEL：</p>
-          <p>0898-22-0351</p>
+          <p><a href="tel:0898-22-0351" class="tel">0898-22-0351</a></p>
         </div>
       </div>
     </footer>
