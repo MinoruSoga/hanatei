@@ -24,6 +24,12 @@
     />
   </head>
   <body>
+    <!-- ローダーのoverlay -->
+    <div id="loader">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
     <header>
       <a class="logo-link" href="/">
         <img src="image/Logo.png" alt="Your Logo" class="logo" />
@@ -66,7 +72,7 @@
           ぜひ、お越しいただき、季節ごとの美味しさと日本料理の本格的な味わいをご堪能ください。
         </p>
 
-        <img src="image/about_entrance.jpg" alt="はな亭" />
+        <img src="image/about_entrance.JPG" alt="はな亭" />
       </div>
     </section>
     <hr class="border" />
@@ -147,19 +153,19 @@
             <img src="image/guide_02.jpeg" alt="ご案内" />
           </div>
           <div class="img-09">
-            <img src="image/guide_03.jpg" alt="ご案内" />
+            <img src="image/guide_03.JPG" alt="ご案内" />
           </div>
         </div>
         <div class="img-slide pc">
           <ul class="slider">
             <li><img src="image/guide_01.jpeg" alt="ご案内" /></li>
             <li><img src="image/guide_02.jpeg" alt="ご案内" /></li>
-            <li><img src="image/guide_03.jpg" alt="ご案内" /></li>
-            <li><img src="image/guide_04.jpg" alt="ご案内" /></li>
-            <li><img src="image/guide_05.jpg" alt="ご案内" /></li>
-            <li><img src="image/guide_06.jpg" alt="ご案内" /></li>
-            <li><img src="image/guide_07.jpg" alt="ご案内" /></li>
-            <li><img src="image/guide_08.jpg" alt="ご案内" /></li>
+            <li><img src="image/guide_03.JPG" alt="ご案内" /></li>
+            <li><img src="image/guide_04.JPG" alt="ご案内" /></li>
+            <li><img src="image/guide_05.JPG" alt="ご案内" /></li>
+            <li><img src="image/guide_06.JPG" alt="ご案内" /></li>
+            <li><img src="image/guide_07.JPG" alt="ご案内" /></li>
+            <li><img src="image/guide_08.JPG" alt="ご案内" /></li>
           </ul>
         </div>
         <div class="wrapper">
@@ -218,37 +224,37 @@
       <div class="inner">
         <div class="img-show sp">
           <div class="img-01">
-            <img src="image/room_1f_01.jpg" alt="お部屋" />
+            <img src="image/room_1f_01.JPG" alt="お部屋" />
           </div>
           <div class="img-02">
-            <img src="image/room_1f_02.jpg" alt="お部屋" />
+            <img src="image/room_1f_02.JPG" alt="お部屋" />
           </div>
           <div class="img-03">
-            <img src="image/room_1f_03.jpg" alt="お部屋" />
+            <img src="image/room_1f_03.JPG" alt="お部屋" />
           </div>
           <div class="img-03">
-            <img src="image/room_2f_01.jpg" alt="お部屋" />
+            <img src="image/room_2f_01.JPG" alt="お部屋" />
           </div>
           <div class="img-03">
-            <img src="image/room_2f_02.jpg" alt="お部屋" />
+            <img src="image/room_2f_02.JPG" alt="お部屋" />
           </div>
         </div>
         <div class="img-slide pc">
           <ul class="slider">
             <li>
-              <img src="image/room_1f_01.jpg" alt="お部屋" />
+              <img src="image/room_1f_01.JPG" alt="お部屋" />
             </li>
             <li>
-              <img src="image/room_1f_02.jpg" alt="お部屋" />
+              <img src="image/room_1f_02.JPG" alt="お部屋" />
             </li>
             <li>
-              <img src="image/room_1f_03.jpg" alt="お部屋" />
+              <img src="image/room_1f_03.JPG" alt="お部屋" />
             </li>
             <li>
-              <img src="image/room_2f_01.jpg" alt="お部屋" />
+              <img src="image/room_2f_01.JPG" alt="お部屋" />
             </li>
             <li>
-              <img src="image/room_2f_02.jpg" alt="お部屋" />
+              <img src="image/room_2f_02.JPG" alt="お部屋" />
             </li>
           </ul>
         </div>
@@ -345,6 +351,10 @@
           speed: 1500,
         });
       });
+
+      $(window).on('load', function(){
+        $('#loader').fadeOut(); 
+    });
     </script>
   </body>
 </html>
