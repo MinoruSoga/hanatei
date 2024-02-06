@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-padding-top: 20px;
+}
+
 body {
   margin: 0px;
   font-family: "Noto Serif JP", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
@@ -44,10 +48,10 @@ figure {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .ussura {
-  margin-bottom: 80px;
   max-width: 90%;
 }
 @media screen and (min-width: 768px) {
@@ -58,10 +62,8 @@ a {
 
 body {
   width: 100%;
-  object-fit: cover;
+  background: url("../image/background.jpeg") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 body header {
   display: flex;
@@ -220,8 +222,13 @@ body header > ul.nav_list {
     display: none;
   }
 }
+body section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
 body section.fv {
   padding-top: 90px;
+  padding-bottom: 0px;
 }
 body section.fv .bg {
   display: flex;
@@ -230,16 +237,16 @@ body section.fv .bg {
 body section.fv .bg img {
   width: 100%;
   height: 750px;
-  margin-bottom: 60px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   body section.fv .bg img {
     max-width: 1200px;
     height: 450px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-top: 60px;
-    margin-bottom: 120px;
   }
 }
 body section.about {
@@ -247,18 +254,17 @@ body section.about {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  body section.about {
+    padding-bottom: 120px;
+  }
+}
 body section.about .inner {
   text-align: center;
   width: 90%;
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 80px;
-}
-@media screen and (min-width: 768px) {
-  body section.about .inner {
-    margin-bottom: 120px;
-  }
 }
 body section.about .inner h2 {
   font-size: 26px;
@@ -279,13 +285,15 @@ body section.about .inner p {
 body section.about .inner img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   body section.about .inner img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 body section.food .title {
@@ -300,7 +308,6 @@ body section.food .inner {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 80px;
 }
 body section.food .inner .food_course {
   justify-content: space-between;
@@ -337,7 +344,8 @@ body section.food .inner .food_course .img-frame .img-02 img,
 body section.food .inner .food_course .img-frame .img-03 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   align-items: center;
 }
 body section.food .inner .food_course .img-frame .img-01 {
@@ -459,7 +467,6 @@ body .pc_food {
   }
   body .pc_food .pc_inner {
     display: block;
-    margin-bottom: 100px;
   }
   body .pc_food .pc_inner .slick-slide {
     width: 1000px; /* スライドの幅を指定 */
@@ -469,7 +476,8 @@ body .pc_food {
   body .pc_food .pc_inner .slick-slide img {
     width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
     height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
-    object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
+    -o-object-fit: cover;
+       object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
   }
   body .pc_food .pc_course {
     margin-top: 80px;
@@ -536,7 +544,8 @@ body .pc_food {
   .guidance .pc_inner .pc_image .slick-slide img {
     width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
     height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
-    object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
+    -o-object-fit: cover;
+       object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
   }
 }
 
@@ -573,7 +582,8 @@ body .pc_food {
 .inner .guidance_course .img-frame .img-09 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   align-items: center;
 }
 .inner .guidance_course .img-frame .img-07 {
@@ -650,11 +660,6 @@ body .pc_food {
   text-align: center;
   line-height: 1.4;
 }
-@media screen and (min-width: 768px) {
-  .inner .guidance_course .guidance_text {
-    margin-bottom: 100px;
-  }
-}
 .inner .guidance_course .guidance_text .text_2 {
   font-size: 16px;
   font-weight: bold;
@@ -684,7 +689,6 @@ body .pc_food {
 .inner .guidance_course .guidance_text .text_1 {
   font-size: 14px;
   line-height: 1.8;
-  margin-bottom: 80px;
 }
 
 .access {
@@ -704,9 +708,6 @@ body .pc_food {
   text-align: center;
   font-size: 26px;
   margin-bottom: 60px;
-}
-.access .title {
-  margin-bottom: 80px;
 }
 @media screen and (min-width: 768px) {
   .access .title {
@@ -823,15 +824,15 @@ footer .inner .number {
     font-size: 20px;
   }
 }
+footer .inner .number .tel {
+  color: white;
+}
 @media screen and (min-width: 768px) {
   footer .inner .number .tel {
     font-size: 25px;
   }
 }
 
-.fv {
-  padding-top: 111px;
-}
 .fv .bg_2 {
   display: flex;
   justify-content: center;
@@ -839,14 +840,16 @@ footer .inner .number {
 .fv .bg_2 img {
   width: 100%;
   height: 190px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 50px;
 }
 @media screen and (min-width: 768px) {
   .fv .bg_2 img {
     max-width: 1200px;
     height: 560px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-top: 57px;
     margin-bottom: 100px;
   }
@@ -910,7 +913,7 @@ footer .inner .number {
 }
 .recruit .inner h2.inner_p {
   font-size: 14px;
-  margin-bottom: 52px;
+  margin-bottom: 0px;
 }
 @media screen and (min-width: 768px) {
   .recruit .inner h2.inner_p {
