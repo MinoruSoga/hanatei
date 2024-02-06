@@ -60,7 +60,7 @@ a {
   text-decoration: none;
   color: black;
 }
-.ussura {
+.border {
   max-width: 90%;
   @include media(md) {
     max-width: 1000px;
@@ -69,16 +69,23 @@ a {
 
 body {
   width: 100%;
-  // background-image: url('../image/background.jpeg');
-  // object-fit: cover;
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
   background: url('../image/background.jpeg') no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+
+  .pc{
+    display: none;
+  }
+  @include media(md) {
+    .sp{
+      display: none;
+    }
+    .pc{
+      display: block;
+    }
+  }
   header {
     display: flex;
     position: fixed;
@@ -98,12 +105,17 @@ body {
         width: 30px;
         height: 30px;
       }
-      h1 {
+      h1.logo-text {
         color: black;
         font-size: 32px;
         font-weight: bold;
       }
     }
+
+    > ul.nav_list {
+      display: none;
+    }
+
     .menu-icon {
       .drawer_hidden {
         display: none;
@@ -205,9 +217,6 @@ body {
       }
     }
 
-    > ul.nav_list {
-      display: none;
-    }
     @include media(md) {
       height: 128px;
       width: 100%;
@@ -218,7 +227,7 @@ body {
           width: 100px;
           height: 100px;
         }
-        h1 {
+        h1.logo-text {
           margin-left: 27px;
         }
       }
@@ -235,15 +244,25 @@ body {
       }
       .menu-icon {
         display: none;
-      }
-      .nav_content {
-        display: none;
+        .nav_content {
+          display: none;
+        }
       }
     }
   }
   section{
     padding-top: 60px;
     padding-bottom: 80px;
+    .inner{
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1000px;
+      h2{
+        font-size: 26px;
+        margin-bottom: 60px;
+      }
+    }
   }
   section.fv {
     padding-top: 90px;
@@ -264,7 +283,7 @@ body {
       }
     }
   }
-  section.about {
+  #about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,14 +292,8 @@ body {
     }
     .inner {
       text-align: center;
-      width: 90%;
-      max-width: 1000px;
-      margin-right: auto;
-      margin-left: auto;
       h2 {
-        font-size: 26px;
         color: black;
-        margin-bottom: 60px;
       }
       p {
         font-size: 16px;
@@ -303,376 +316,323 @@ body {
       }
     }
   }
-  section.food {
-    .title {
-      display: block;
+  #food,
+  #room
+  {
+    .title{
       text-align: center;
       h2 {
-        font-size: 32px;
+        // font-size: 32px;
         margin-bottom: 60px;
       }
     }
-    .inner {
-      width: 90%;
-      margin-right: auto;
-      margin-left: auto;
-      .food_course {
-        justify-content: space-between;
-        align-items: center;
-        div {
-          text-align: center;
-          line-height: 1.4;
-        }
-        .img-frame {
-          position: relative;
-          width: 100%;
-          height: 195px;
-          overflow: hidden;
-          margin: 0 auto;
-          margin-bottom: 60px;
-          @include media(md) {
-            display: none;
-          }
-
-          .img-01,
-          .img-02,
-          .img-03 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              align-items: center;
-            }
-          }
-          .img-01 {
-            animation: slide-animation-01 24s infinite;
-          }
-
-          .img-02 {
-            animation: slide-animation-02 24s infinite;
-          }
-
-          .img-03 {
-            animation: slide-animation-03 24s infinite;
-          }
-
-          @keyframes slide-animation-01 {
-            0% {
-              opacity: 1;
-              transform: scale(1);
-            }
-            30% {
-              opacity: 1;
-            }
-            40% {
-              opacity: 0;
-              transform: scale(1.15);
-            }
-            90% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
-
-          @keyframes slide-animation-02 {
-            0% {
-              opacity: 0;
-            }
-            30% {
-              opacity: 0;
-              transform: scale(1.1);
-            }
-            40% {
-              opacity: 1;
-            }
-            60% {
-              opacity: 1;
-            }
-            70% {
-              opacity: 0;
-              transform: scale(1);
-            }
-            100% {
-              opacity: 0;
-            }
-          }
-
-          @keyframes slide-animation-03 {
-            0% {
-              opacity: 0;
-            }
-            60% {
-              opacity: 0;
-              transform: scale(1);
-            }
-            70% {
-              opacity: 1;
-            }
-            90% {
-              opacity: 1;
-            }
-            100% {
-              opacity: 0;
-              transform: scale(1.1);
-            }
-          }
-        }
-      }
-      .launch {
-        margin-bottom: 40px;
-        align-items: center;
-        .title {
-          font-size: 20px;
-          font-weight: bold;
-          margin-bottom: 10px;
-          @include media(md) {
-            display: none;
-          }
-        }
-        .text {
-          font-size: 14px;
-          line-height: 2;
-          @include media(md) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-  .pc_food {
-    display: none;
-  }
-  @include media(md) {
-    section.food {
-      display: none;
-    }
-    .pc_food {
-      width: 90%;
-      max-width: 1000px;
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      justify-content: center;
-      align-items: center;
-      .title {
-        display: block;
-        text-align: center;
-        h2 {
-          font-size: 26px;
-          margin-bottom: 80px;
-        }
-      }
-      .pc_inner {
-        display: block;
-
-        .slick-slide {
-          width: 1000px; /* スライドの幅を指定 */
-          height: 350px; /* スライドの高さを指定 */
-          overflow: hidden; /* 内容がはみ出た場合は隠す */
-          img {
-            width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
-            height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
-            object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
-          }
-        }
-      }
-
-      .pc_course {
-        margin-top: 80px;
-        justify-content: space-between;
-        .title {
-          font-size: 20px;
-          font-weight: bold;
-          margin-bottom: 30px;
-        }
-        .text {
-          font-size: 16px;
-          text-align: center;
-          line-height: 2.2;
-          margin-bottom: 60px;
-        }
-      }
-    }
-  }
-}
-
-.guidance {
-  width: 90%;
-  max-width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
-  .title {
-    text-align: center;
-    margin-bottom: 60px;
-    p {
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-    }
-  }
-  @include media(md) {
-    .title {
-      text-align: center;
-      h2 {
-        font-size: 26px;
-      }
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-  .pc_inner {
-    display: none;
-    @include media(md) {
-      max-width: 1000px;
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      justify-content: center;
-      .pc_image {
-        display: block;
-
-        .slick-slide {
-          width: 1000px; /* スライドの幅を指定 */
-          height: 350px; /* スライドの高さを指定 */
-          overflow: hidden; /* 内容がはみ出た場合は隠す */
-          img {
-            width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
-            height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
-            object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
-          }
-        }
-      }
-    }
-  }
-}
-.inner {
-  justify-content: space-between;
-  .guidance_course {
-    align-items: center;
-    .img-frame {
-      position: relative;
-      width: 100%;
-      height: 195px;
-      overflow: hidden;
-      margin: 0 auto;
-      margin-bottom: 60px;
-      @include media(md) {
-        display: none;
-      }
-
-      .img-07,
-      .img-08,
-      .img-09 {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .inner{
+      .img-show {
+        position: relative;
         width: 100%;
-        height: 100%;
-        img {
+        height: 195px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        @include media(md) {
+          display: none;
+        }
+
+        .img-01,
+        .img-02,
+        .img-03 {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          align-items: center;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-items: center;
+          }
         }
-      }
-      .img-07 {
-        animation: slide-animation-01 24s infinite;
-      }
+        .img-01 {
+          animation: slide-animation-01 24s infinite;
+        }
 
-      .img-08 {
-        animation: slide-animation-02 24s infinite;
-      }
+        .img-02 {
+          animation: slide-animation-02 24s infinite;
+        }
 
-      .img-09 {
-        animation: slide-animation-03 24s infinite;
-      }
+        .img-03 {
+          animation: slide-animation-03 24s infinite;
+        }
+        @keyframes slide-animation-01 {
+          0% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          30% {
+            opacity: 1;
+          }
+          40% {
+            opacity: 0;
+            transform: scale(1.15);
+          }
+          90% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
 
-      @keyframes slide-animation-01 {
-        0% {
-          opacity: 1;
-          transform: scale(1);
+        @keyframes slide-animation-02 {
+          0% {
+            opacity: 0;
+          }
+          30% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
+          40% {
+            opacity: 1;
+          }
+          60% {
+            opacity: 1;
+          }
+          70% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+          }
         }
-        30% {
-          opacity: 1;
-        }
-        40% {
-          opacity: 0;
-          transform: scale(1.15);
-        }
-        90% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
+
+        @keyframes slide-animation-03 {
+          0% {
+            opacity: 0;
+          }
+          60% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          70% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
         }
       }
-
-      @keyframes slide-animation-02 {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 0;
-          transform: scale(1.1);
-        }
-        40% {
-          opacity: 1;
-        }
-        60% {
-          opacity: 1;
-        }
-        70% {
-          opacity: 0;
-          transform: scale(1);
-        }
-        100% {
-          opacity: 0;
+      @include media(md){
+        .img-slide{
+          margin-bottom: 80px;  
+          .slick-slide {
+            width: 1000px; /* スライドの幅を指定 */
+            height: 350px; /* スライドの高さを指定 */
+            overflow: hidden; /* 内容がはみ出た場合は隠す */
+            img {
+              width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
+              height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
+              object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
+            }
+          }
         }
       }
-
-      @keyframes slide-animation-03 {
-        0% {
-          opacity: 0;
-        }
-        60% {
-          opacity: 0;
-          transform: scale(1);
-        }
-        70% {
-          opacity: 1;
-        }
-        90% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-          transform: scale(1.1);
+      .wrapper{
+        text-align: center;
+        .launch,
+        .dinner
+         {
+          margin-bottom: 40px;
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .text {
+            font-size: 14px;
+            line-height: 2;
+          }
         }
       }
     }
-    .guidance_text {
+  }
+  #guide{
+    .title{
       text-align: center;
-      line-height: 1.4;
-      .text_2 {
-        font-size: 16px;
+      h2 {
+        margin-bottom: 60px;
+      }
+      p {
+        font-size: 14px;
         font-weight: bold;
-        margin-top: 80px;
-        margin-bottom: 20px;
-        @include media(md) {
-          font-size: 18px;
+        text-align: center;
+      }
+    }
+    .inner{
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1000px;
+      .img-show{
+        position: relative;
+        width: 100%;
+        height: 195px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 60px;
+
+        .img-07,
+        .img-08,
+        .img-09 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            align-items: center;
+          }
+        }
+        .img-07 {
+          animation: slide-animation-01 24s infinite;
+        }
+
+        .img-08 {
+          animation: slide-animation-02 24s infinite;
+        }
+
+        .img-09 {
+          animation: slide-animation-03 24s infinite;
+        }
+
+        @keyframes slide-animation-01 {
+          0% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          30% {
+            opacity: 1;
+          }
+          40% {
+            opacity: 0;
+            transform: scale(1.15);
+          }
+          90% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes slide-animation-02 {
+          0% {
+            opacity: 0;
+          }
+          30% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
+          40% {
+            opacity: 1;
+          }
+          60% {
+            opacity: 1;
+          }
+          70% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes slide-animation-03 {
+          0% {
+            opacity: 0;
+          }
+          60% {
+            opacity: 0;
+            transform: scale(1);
+          }
+          70% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1.1);
+          }
         }
       }
-      .text_3 {
+      .img-slide{
+        .slick-slide {
+          width: 1000px; /* スライドの幅を指定 */
+          height: 350px; /* スライドの高さを指定 */
+          overflow: hidden; /* 内容がはみ出た場合は隠す */
+          img {
+            width: 100%; /* 画像の幅を親要素に合わせて100%に設定 */
+            height: 100%; /* 画像の高さを親要素に合わせて100%に設定 */
+            object-fit: cover; /* 画像を中央に配置し、アスペクト比を保ったまま切り取る */
+          }
+        }
+      }
+      .wrapper{
+        text-align: center;
+        line-height: 1.4;
+        .intro {
+          font-size: 16px;
+          font-weight: bold;
+          margin-top: 80px;
+          margin-bottom: 20px;
+          @include media(md) {
+            font-size: 18px;
+          }
+        }
+        .content {
+          font-size: 15px;
+          line-height: 2;
+          margin-bottom: 40px;
+          @include media(md) {
+            font-size: 16px;
+          }
+        }
+        .price {
+          font-size: 16px;
+          line-height: 1.8;
+          margin-bottom: 40px;
+        }
+        .reserve {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+  #first-time{
+    .title{
+      text-align: center;
+      h2 {
+        // font-size: 32px;
+        margin-bottom: 60px;
+      }
+    }
+    .inner{
+      .content{
+        text-align: center;
+        // line-height: 1.4;
         font-size: 15px;
         line-height: 2;
         margin-bottom: 40px;
@@ -680,144 +640,134 @@ body {
           font-size: 16px;
         }
       }
-      .text_4 {
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 40px;
-      }
-      .text_1 {
-        font-size: 14px;
-        line-height: 1.8;
-      }
     }
   }
-}
-
-.access {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  @include media(md) {
-    max-width: 1000px;
-    margin-left: auto;
+  #access {
+    width: 90%;
     margin-right: auto;
-  }
-  h2 {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 60px;
-  }
-  .title {
+    margin-left: auto;
+    display: block;
     @include media(md) {
-      display: flex;
-      flex-direction: row-reverse;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    iframe {
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 60px;
+    }
+    .title {
       @include media(md) {
-        width: 50%;
-        max-height: 445px;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      iframe {
+        @include media(md) {
+          width: 50%;
+          max-height: 445px;
+        }
+      }
+      .font {
+        width: 100%;
+        margin-left: 20px;
+        line-height: 1.5;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        @include media(md) {
+          width: 50%;
+        }
+        .reservation {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        .tel {
+          font-size: 22px;
+          margin-bottom: 40px;
+        }
+        .underline {
+          border: 1px solid #6a6868;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .display {
+          text-align: center;
+          font-size: 16px;
+          margin-bottom: 53px;
+          @include media(md) {
+            margin-bottom: 0;
+          }
+        }
       }
     }
-    .font {
-      width: 100%;
-      margin-left: 20px;
-      line-height: 1.5;
-      text-align: center;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    height: auto;
+    width: 100%;
+    padding-bottom: 20px;
+    @include media(md) {
+      height: auto;
+      padding-bottom: 30px;
+    }
+    .inner {
+      padding-top: 20px;
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
       @include media(md) {
-        width: 50%;
-      }
-      .reservation {
-        font-size: 16px;
-        margin-bottom: 8px;
-      }
+        max-width: 1000px;
 
-      .tel {
-        font-size: 22px;
-        margin-bottom: 40px;
+        padding-top: 30px;
       }
-      .underline {
-        border: 1px solid #6a6868;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
-      }
-      p {
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-      .display {
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 53px;
+      h1 {
+        font-size: 24px;
+        margin-bottom: 35px;
         @include media(md) {
-          margin-bottom: 0;
+          font-size: 45px;
+          margin-bottom: 50px;
         }
       }
-    }
-  }
-}
-
-footer {
-  background-color: black;
-  color: white;
-  height: auto;
-  width: 100%;
-  padding-bottom: 20px;
-  @include media(md) {
-    height: auto;
-    padding-bottom: 30px;
-  }
-  .inner {
-    padding-top: 20px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    @include media(md) {
-      max-width: 1000px;
-
-      padding-top: 30px;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 35px;
-      @include media(md) {
-        font-size: 45px;
-        margin-bottom: 50px;
+      .address {
+        display: flex;
+        gap: 10px;
       }
-    }
-    .address {
-      display: flex;
-      gap: 10px;
-    }
-    p {
-      line-height: 1;
-      font-size: 10px;
-      margin-bottom: 10px;
-      @include media(md) {
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-    }
-    .number {
-      display: flex;
-      gap: 10px;
-      align-items: center;
       p {
+        line-height: 1;
+        font-size: 10px;
+        margin-bottom: 10px;
         @include media(md) {
           font-size: 20px;
+          margin-bottom: 20px;
         }
-        // a{
-        //   color: white;
-        // }
       }
-      .tel {
-        color: white;
-        @include media(md) {
-          font-size: 25px;
+      .number {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        p {
+          @include media(md) {
+            font-size: 20px;
+          }
+          // a{
+          //   color: white;
+          // }
+        }
+        .tel {
+          color: white;
+          @include media(md) {
+            font-size: 25px;
+          }
         }
       }
     }
