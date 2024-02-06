@@ -69,22 +69,24 @@ a {
 
 body {
   width: 100%;
-  background: url('../image/background.jpeg') no-repeat center center fixed; 
+  // background: url('../image/background.jpeg') no-repeat center center fixed; 
       // -webkit-background-size: cover;
       // -moz-background-size: cover;
       // -o-background-size: cover;
       // background-size: cover;
       // -webkit-background-size: 1920px 1080px;
       // background-size: 1920px 1080px;
-      @media (max-width: 600px) {
-        -webkit-background-size: auto 100%;
-        background-size: auto 100%;
-      }
-    
-      @media (min-width: 600px) {
-        -webkit-background-size: cover;
-        background-size: cover; 
-      } 
+  background: url('../image/background.jpeg') no-repeat center center;
+
+  @media (max-width: 600px) {
+    -webkit-background-size: auto 100%; 
+    background-size: auto 100%;
+  }
+
+  @media (min-width: 600px) {
+    -webkit-background-size: 500px 800px;
+    background-size: 500px 800px;  
+  }
 
   .pc{
     display: none;
