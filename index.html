@@ -24,6 +24,12 @@
     />
   </head>
   <body>
+    <!-- ローダーのoverlay -->
+    <div id="loader">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
     <header>
       <a class="logo-link" href="/">
         <img src="image/Logo.png" alt="Your Logo" class="logo" />
@@ -345,6 +351,10 @@
           speed: 1500,
         });
       });
+
+      $(window).on('load', function(){
+        $('#loader').fadeOut(); 
+    });
     </script>
   </body>
 </html>
