@@ -104,10 +104,21 @@ body header .logo-link img.logo {
   width: 30px;
   height: 30px;
 }
+body header .logo-link .logo-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 body header .logo-link h1.logo-text {
   color: black;
   font-size: 32px;
   font-weight: bold;
+  line-height: 1;
+}
+body header .logo-link .logo-sub {
+  font-size: 12px;
+  color: black;
+  letter-spacing: 0.1em;
 }
 body header > ul.nav_list {
   display: none;
@@ -754,14 +765,30 @@ body footer .inner {
     padding-top: 30px;
   }
 }
-body footer .inner h1 {
-  font-size: 24px;
+body footer .inner .footer-logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 35px;
 }
+body footer .inner .footer-logo-group h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+body footer .inner .footer-logo-group .footer-logo-sub {
+  font-size: 10px;
+  color: white;
+  letter-spacing: 0.1em;
+}
 @media screen and (min-width: 768px) {
-  body footer .inner h1 {
-    font-size: 45px;
+  body footer .inner .footer-logo-group {
     margin-bottom: 50px;
+  }
+  body footer .inner .footer-logo-group h1 {
+    font-size: 45px;
+  }
+  body footer .inner .footer-logo-group .footer-logo-sub {
+    font-size: 16px;
   }
 }
 body footer .inner .address {
