@@ -109,7 +109,7 @@ body header .logo-link .logo-text-group {
   flex-direction: column;
   align-items: flex-start;
 }
-body header .logo-link h1.logo-text {
+body header .logo-link .logo-text {
   color: black;
   font-size: 32px;
   font-weight: bold;
@@ -231,7 +231,7 @@ body header .menu-icon .nav_content .nav_list a {
     width: 100px;
     height: 100px;
   }
-  body header .logo-link h1.logo-text {
+  body header .logo-link .logo-text {
     margin-left: 27px;
   }
   body header > ul.nav_list {
@@ -771,7 +771,7 @@ body footer .inner .footer-logo-group {
   align-items: flex-start;
   margin-bottom: 35px;
 }
-body footer .inner .footer-logo-group h1 {
+body footer .inner .footer-logo-group .footer-brand {
   font-size: 24px;
   margin-bottom: 4px;
 }
@@ -784,7 +784,7 @@ body footer .inner .footer-logo-group .footer-logo-sub {
   body footer .inner .footer-logo-group {
     margin-bottom: 50px;
   }
-  body footer .inner .footer-logo-group h1 {
+  body footer .inner .footer-logo-group .footer-brand {
     font-size: 45px;
   }
   body footer .inner .footer-logo-group .footer-logo-sub {
@@ -858,12 +858,14 @@ body footer .inner .number .tel {
   margin-right: auto;
   margin-left: auto;
 }
-.recruit .inner h2 {
+.recruit .inner h2,
+.recruit .inner .recruit-heading {
   font-size: 16px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
-  .recruit .inner h2 {
+  .recruit .inner h2,
+.recruit .inner .recruit-heading {
     font-size: 32px;
     margin-bottom: 80px;
   }
@@ -913,3 +915,7 @@ body footer .inner .number .tel {
     margin-bottom: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
+/* Intrinsic image dimensions reserve space without changing responsive layout. */
+img { max-width: 100%; height: auto; }
+body header .logo-link .logo-text { font-size: 32px; font-weight: bold; }
+body footer .inner > .footer-brand { font-size: 32px; font-weight: bold; }
