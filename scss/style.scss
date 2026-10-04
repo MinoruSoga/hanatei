@@ -144,7 +144,7 @@ body {
         width: 30px;
         height: 30px;
       }
-      h1.logo-text {
+      .logo-text {
         color: black;
         font-size: 32px;
         font-weight: bold;
@@ -266,7 +266,7 @@ body {
           width: 100px;
           height: 100px;
         }
-        h1.logo-text {
+        .logo-text {
           margin-left: 27px;
         }
       }
@@ -769,7 +769,7 @@ body {
 
         padding-top: 30px;
       }
-      h1 {
+      .footer-brand {
         font-size: 24px;
         margin-bottom: 35px;
         @include media(md) {
@@ -844,7 +844,7 @@ body {
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
-    h2 {
+    h2, .recruit-heading {
       font-size: 16px;
       margin-bottom: 30px;
       @include media(md) {
@@ -894,3 +894,7 @@ body {
     }
   }
 }
+
+img { max-width: 100%; height: auto; }
+body header .logo-link .logo-text { font-size: 32px; font-weight: bold; }
+body footer .inner > .footer-brand { font-size: 32px; font-weight: bold; }

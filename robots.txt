@@ -1,0 +1,6 @@
+# Public pages remain crawlable, including AI crawlers.
+# A separate training opt-out policy requires owner review.
+User-agent: *
+Allow: /
+
+Sitemap: https://hanatei.jp/sitemap.xml
